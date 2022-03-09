@@ -1,0 +1,170 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+*,
+*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+    background-color: white;
+}
+@font-face{
+    font-family: "Pokemon";
+    src: url("Fuentes/Pokemon-Solid.woff");
+}
+header{
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    background-image: linear-gradient(to right, red, orangered, yellow, yellow, orangered, red);
+    background-size: 300% 100%;
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 3rem;
+    -webkit-text-stroke: 2px blue; 
+    font-family: "Pokemon", sans-serif;
+    color: yellow;
+    transition: background-position 1s ease-in;
+}
+header:hover{
+    background-position: 100% 0%;
+}
+main{
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+.menu-pokemon{
+    width: 3rem;
+    height: 3rem;
+    position: sticky;
+    top: 0rem;
+    left: .3rem;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Boton de menu */
+.off-canvas-pokemon{
+    width: 3rem;
+    height: 0.6rem;
+    background-color: black;
+    top: 1rem;
+    left: .9rem;
+    position: fixed;
+    z-index: 998;
+    border-radius: 2rem;
+    transition: transform 0.5s ease-in, background-color 0.5s ease-in;
+}
+.off-canvas-pokemon::after,
+.off-canvas-pokemon::before{
+    width: 3rem;
+    height: 0.6rem;
+    background-color: black;
+    content: "";
+    top: 1rem;
+    left: .9rem;
+    display: block;
+    transition: transform 0.5s ease-in;
+    border-radius: 2rem;
+}
+.off-canvas-pokemon::after{
+    transform: rotate(0deg) translateY(-1.5rem);
+}
+.off-canvas-pokemon::before{
+    transform: rotate(0deg) translateY(.9rem);
+}
+.menu-pokemon:checked + .off-canvas-pokemon{
+    background-color: transparent;
+}
+.menu-pokemon:checked + .off-canvas-pokemon::before{
+    transform: rotate(45deg);
+}
+.menu-pokemon:checked + .off-canvas-pokemon::after{
+    transform: rotate(-45deg) translate(0.5rem, -0.4rem);
+}
+.menu-oculto{
+    width: 30vw;
+    height: 30vh;
+    background-color: yellow;
+    border: thick solid black;
+    transform: translate(-100%, 4rem);
+    transition: transform 0.5s ease-in, box-shadow 0.5s ease-in;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border-radius: 1rem;
+}
+.menu-pokemon:checked ~ .menu-oculto{
+    transform: translate(0, 4rem);
+    box-shadow: 1rem 0.5rem 1rem 0.1rem black;
+}
+.menu-link:link{
+    text-decoration: none;
+}
+.contenido-de-la-pagina{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    background-color: rgba(100, 100, 100, .2);
+    border: thick outset grey;
+    text-align: center;
+    overflow: hidden;
+}
+.encendido-apagado{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 999;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.pikachu{
+    width: 100px;
+    height: 100px;
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    perspective: 10rem;
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease-in;
+    cursor: pointer;
+}
+.pikachu img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 0 0;
+}
+.cara{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+.pikachu-frente{
+    transform: rotate(0deg);
+}
+.pikachu-espalda{
+    transform: rotateY(180deg);
+}
+.encendido-apagado:checked ~ .pikachu{
+    transform: rotateY(180deg)
+}
+.encendido-apagado:checked ~ main{
+    background-color: black;
+    color: white;
+}
+/* .pikachu:hover{
+    transform: rotateY(180deg);
+} */
