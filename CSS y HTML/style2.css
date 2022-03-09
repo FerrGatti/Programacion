@@ -1,0 +1,149 @@
+body{
+    background-image: url(https://c.wallhere.com/photos/33/47/1920x1080_px_8_bit_Cave_Story_clouds_dragon_Moon_Pixel_Art_Pixels-684819.jpg!d);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+/*header{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    text-decoration: none;
+} 
+.logo{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 30px 0px;
+    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(300, 0, 30);
+    font-weight: bold;
+
+}*/
+header{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    text-decoration: none; 
+    /* colocando el valor none a text-decoration le quitamos el subrayado que venia en el texto. */
+}
+.logo{
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+a{
+    text-decoration: none;
+}
+#css{
+    color: rgb(300, 0, 30);
+    text-decoration: none;
+    list-style: none;
+    /*justify-content: center;*/
+    position: relative;
+    /*display: flex;*/
+    left: 0px;
+    top: 0px;
+}
+.resumen{
+    color: rgb(300, 0, 30);
+}
+.lista{
+    list-style: none;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+    padding: 10px 10px;
+}
+details{
+    padding: 0px 500px;
+}
+li{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+td{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+th{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.menu{
+    margin: 0 5px;
+    text-decoration: none;
+    color: darkorchid;
+    font-size: small;
+    letter-spacing: 1px;
+}
+h2{
+    color: coral;
+    font-family: 'Press Start 2P', cursive;
+}
+p{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+img{
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+}
+label{
+    color: coral;
+}
+pre{
+    color: yellow;
+}
+code{
+    color: yellow;
+}
+dl{
+    color: yellow;
+}
+video{
+    max-width: 100%;
+    height: auto;
+}
+iframe{
+    width: 50%;
+    height: 400px;
+}
+.pseudoul{
+    list-style: none;
+}
+
+.lista *:visited{
+    color: yellow;
+}
+.lista *:link{
+    color: yellow;
+    text-decoration: none;
+}
+.lista *:hover{
+    color: red;
+}
+.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+    float: left;
+}

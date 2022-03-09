@@ -1,0 +1,228 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+.box{
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+.box-shadow{
+    /* box-shadow: mov x mov y radius-blur expansion-blur color inset/outset ; estos son los valores posibles que se le pueden agregar a la sombra de nuestra caja. El color por defecto si no lo especificamos tomara el color que especifiquemos como color de texto.*/
+    /* box-shadow: 1rem 1rem 1rem 1rem #000; */
+    box-shadow: 1rem 1rem 1rem 1rem #0007;
+    /* text-shadow: mov-x mov-y radius-blur color */
+    text-shadow: 0.2rem 0.6rem 1rem;
+}
+
+.shadows-multiples{
+    box-shadow: 1rem 1rem 1rem 1rem #000, 2rem 2rem 1rem 1rem #900, 3rem 3rem 2rem 2rem #000;
+}
+
+.drop-shadow img{
+    max-width: 100%;
+    height: 195px;
+    filter: drop-shadow(4rem 2rem 0.5rem red);
+}
+/* Degradados */
+.deg-lineal{
+    background-image: linear-gradient(green,white,red); /* Para los degradados es comendable utilizar el background image en lugar del background. */
+    background-image: linear-gradient(90deg,green,white,red); /* Dentro de las propiedades podemos agregar grado de inclinacion y cantidad de colores */
+    background-image: linear-gradient(to right,green,white,red); /* Ademas de utilizar grados, podemos indicar con palabras para que lado queremos que se mueva */
+    background-image: linear-gradient(to right top,green 33%,white 34% 67%,red 68%);
+    background-image: linear-gradient(90deg,green 33%,white 34% 67%,red 68%);
+}
+.deg-radius{
+    background-image: radial-gradient(circle, red, cyan, magenta);
+    background-image: radial-gradient(circle at top right, red, cyan, magenta); /* A diferencia del lineal, si queremos indicar la posicion de nuestro objeto debemos hacerlo indicando mediante at */
+    background-image: radial-gradient(ellipse 50px 100px, red, cyan, magenta); /* Tambien en lugar de circulos podemos utilizar ellipses. Estas deben contar con 2 tamanos para que funcionen */
+    background-image: radial-gradient(circle 100px, red 40%, white 41%);   
+}
+.conic-gradient{
+    background-image: conic-gradient(from 90deg,red 0deg 80deg, yellow 81deg 160deg, green 161deg 240deg);
+    background-image: conic-gradient(from 90deg,red 120deg,white 120deg 240deg,blue 240deg);
+}
+
+.repeat-lineal-gradient{ /* Tambien, con la funcion repeating podemos crear patrones de los diferentes degradados */
+    background-image: repeating-linear-gradient(45deg, red 0 10px, cyan 10px 20px, yellow 20px 30px);
+}
+.repeat-radial-gradient{
+    background-image: repeating-radial-gradient(circle 4rem, red 0 10px, black 10px 20px, white 20px 30px);
+}
+.repeat-conic-gradient{
+    background-image: repeating-conic-gradient(red 0 8%, yellow 8% 16%, black 16% 24%);
+}
+
+.grafica-pastel{
+    background-image: conic-gradient(magenta 50%, cyan 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
+.grafica-dona{
+    background-image: radial-gradient(white 30%, black 31% 34%, transparent 34%) ,conic-gradient(magenta 50%, cyan 50% 80%, yellow 80%);
+    border-radius: 50%;
+}
+/* Filtros en imagenes */
+
+.card{
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: 0 30%;
+    /* Blur */
+    filter: blur(.09rem); 
+    /* Brillo */
+    filter: brightness(.3); /* Este filtro va de 0 a 1 */
+    /* Contraste */
+    filter: contrast(.8); /* Este filtro va de 0 a 1 */
+    /* Escala de grises */
+    filter: grayscale(.8); /* Este filtro va de 0 a 1 */
+    /* Sepia */
+    filter: sepia(.5);
+    /* Filtro de colores - va de 0 a 360deg */
+    filter: hue-rotate(300deg);
+    /* Invertir */
+    filter: invert(1); /* Este filtro funciona solo con el valor de 0(sin efecto) o con el valor de 1(invertido) */
+    /* Opacidad */
+    filter: opacity(.5);
+    /* Saturacion */
+    filter: saturate(1.2); /* Mientras mas sobrepasemos el valor de 1, mas se quemara nuestra imagen */
+}
+/* Filtros a fondos */
+.relative{
+    position: relative;
+}
+.absolute{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.backdrop-filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.backdrop-filter h4{
+    background-color:rgba(255, 255, 255, .5);
+    background-color:rgba(255, 50, 200, .5);
+    color: #000;
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(.5rem) hue-rotate(240deg) opacity(.35) invert(1) grayscale(.5);
+}
+/* Dark mode */
+.dark-mode{
+    background-color: #fff;
+    color: #000;
+    filter: invert(1);
+}
+.dark-mode div{
+    filter: invert(1);
+}
+.dark-mode img{
+    filter: invert(1);
+}
+/* Modos de mezcla */
+.blend-modes img{
+    /* mix-blend-mode: color;
+    mix-blend-mode: luminosity;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: color-dodge;
+    mix-blend-mode: darken;
+    mix-blend-mode: difference;
+    mix-blend-mode: exclusion;
+    mix-blend-mode: hard-light;
+    mix-blend-mode: hue;
+    mix-blend-mode: lighten;
+    mix-blend-mode: multiply;
+    mix-blend-mode: overlay;
+    mix-blend-mode: hard-light;
+    mix-blend-mode: soft-light;
+    mix-blend-mode: screen;
+    mix-blend-mode: overlay; */
+    mix-blend-mode: multiply;
+}
+
+.bg-blend-modes{
+    background-image: url("https://media.istockphoto.com/photos/panorama-of-dramatic-sunset-in-the-city-picture-id1031034230?b=1&k=20&m=1031034230&s=170667a&w=0&h=52kc_05pL8JFT2VGWUYCkOLQtF7-zaGqNXCiG6PqVwM="), url("https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg");
+    background-size: cover;
+    /* background-blend-mode: color;
+    background-blend-mode: luminosity;
+    background-blend-mode: color-burn;
+    background-blend-mode: color-dodge;
+    background-blend-mode: darken;
+    background-blend-mode: difference;
+    background-blend-mode: exclusion;
+    background-blend-mode: hard-light;
+    background-blend-mode: hue;
+    background-blend-mode: lighten;
+    background-blend-mode: multiply;
+    background-blend-mode: overlay;
+    background-blend-mode: hard-light;
+    background-blend-mode: soft-light;
+    background-blend-mode: screen;
+    background-blend-mode: overlay; */
+    background-blend-mode: multiply;
+}
+/* Mascaras */
+.clip-path{
+    clip-path: circle(10rem at top 50% left 50%); /* Mascara de circulo */
+    clip-path: ellipse(10rem 7rem); /* Mascara para crear un elipse */
+    clip-path: inset(2rem round 5rem 2rem 5rem 2rem); /* Con round podemos redondear las esquinas */ /*inset es como un padding */
+    clip-path: polygon(0 0, 100% 0, 50% 100%); /* Dependiendo de la cantidad de vertices podemos darle distintas formas, en este caso es un triangulo. Pero para hacer mas facil esto, tenemos varias herramientas onlines. */
+    clip-path: polygon(0% 20%, 60% 20%, 60% 0%, 100% 50%, 60% 100%, 60% 80%, 0% 80%); /* A esta forma la sacamos mediante un clip-path maker de internet */
+}
+/* Formas e imagenes entre textos */
+.shapes{
+    border: thick solid black;
+    margin: 0 auto 5rem;
+    max-width: 800px;
+    padding: 1rem;
+}
+.shapes img{
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    object-position: 10% 50%;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.shape1{
+    margin: 1rem 2rem 1rem 0;
+    shape-outside: circle();
+}
+.shape2{
+    margin: 1rem 0 1rem 2rem;
+    shape-outside: circle();
+}
+.shape3{
+    margin: 1rem 2rem 1rem 0;
+    shape-outside: circle();
+}

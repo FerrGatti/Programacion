@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen HTML</title>
+    <meta name="description" content="En esta pagina veremos un resumen de lo aprendido en los distintos cursos de HTML">
+    <!--La meta etiqueta description es casi tan importante comom la meta etiqueta title. NO debe tener mas de 165 caracteres. Al momento de realizar una busqueda en algun motor de busqueda, la descripcion que pongamos figurara en esa busqueda y sera un resumen de lo que trata nuestra pagina-->
+    <link rel="canonical" href="https://tudominio.com/canonico">
+    <link rel="icon" href="https://pngset.com/images/library-of-javascript-icon-graphic-freeuse-files-logo-logo-javascript-icon-in-number-symbol-text-first-aid-transparent-png-1497709.png">
+    <link rel="apple-touch-icon" href="https://pngset.com/images/library-of-javascript-icon-graphic-freeuse-files-logo-logo-javascript-icon-in-number-symbol-text-first-aid-transparent-png-1497709.png">
+    <!--Icon y apple touch icon son las etiquetas para darle un icono a la pestana de nuestra web, apple touch icon es para que este icono funcione en los mobiles-->
+    <meta name="theme-color" content="#FF6600">
+    <!--Esta meta nos sirve para cambiar el color de la barra de navegacion de los dispositivos moviles-->
+
+    <link href="style2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+       <a href="../CSS y HTML/CSSresumen.html" target="_blank" title="Inicio" alt="Inicio"><h1 class="logo">Resume of html</h1></a><br>
+        <ul id="css">
+            <li class="resumen">Tambien visita<a href="../CSS y HTML/Prueba de proyecto/CSSresumen.html" target="_blank" id="css" title="Resumen css"> Resumen CSS</a></li>
+        </ul>
+    </header>
+
+        <nav>
+            <details style="color: yellow;" class="detalle">
+                <summary>Links de navegacion</summary>
+            <ul class="lista">
+                <article><li><a href="#Body" class="menu"> Body</a></li></article>
+                <article><li><a href="#Main" class="menu"> Main</a></li></article>
+                <article><li><a href="#Listas" class="menu"> Listas</a></li></article>
+                <article><li><a href="#Imagenes" class="menu"> Imagenes</a></li></article>
+                <article><li><a href="#Links" class="menu"> Links</a></li></article>
+                <article><li><a href="#Tablas" class="menu"> Tablas</a></li></article>
+                <article><li><a href="#Formularios" class="menu"> Formularios</a></li></article>
+                <article><li><a href="#Atributos" class="menu"> Atributos de texto</a></li></article>
+                <article><li><a href="#Linea" class="menu"> Linea divisoria</a></li></article>
+                <article><li><a href="#Elemento div" class="menu"> Elemento div</a></li></article>
+                <article><li><a href="#Pie de pagina" class="menu"> Pie de pagina</a></li></article>
+                <article><li><a href="#etiqueta-de-formateo" class="menu"> Etiqueta de formateo</a></li></article>
+                <article><li><a href="#etiquetas-semanticas" class="menu"> Etiquetas semanticas</a></li></article>
+                <article><li><a href="#bloque-linea"class="menu"> Bloque de linea</a></li></article>
+                <article><li><a href="#scrip"class="menu"> Scrips</a></li></article>
+                <article><li><a href="#video"class="menu"> Audio y Video</a></li></article>
+                <article><li><a href="#iframes"class="menu"> Iframes</a></li></article>
+                <article><li><a href="#meta-etiqueta"class="menu"> Meta etiquetas</a></li></article>
+                <article><li><a href="#accesibilidad"class="menu"> Accesibilidad Web</a></li></article>
+            </ul>
+        </details>
+        </br>
+        </nav>
+    <p>El elemento raiz de cada pagina web es la etiqueta <'html'>. Toda la informacion de nuestra pagina web estara dentro de esta etiqueta.
+    Luego de html, tenemos 2 elementos principales: HEAD y BODY.
+    Dentro de la etiqueta <strong>head</strong> va la parte no visible de nuestra pagina, son elementos importantes para la pagina pero no forman parte de la pagina visible. Aqui podemos colocar el link de style para darle forma con codigo css, podemos poner el titulo de la pagina el cual aparecera en el nombre de la ventana y podemos poner tambien el lenguaje que tiene nuestra pagina.</p>
+    <main>
+        <br/><br/>
+        <hr>
+        <h2 id="Body">Body</h2>
+        <p>Dentro del body es donde nosotros comenzamos a armar nuestra pagina, dentro de el tendremos nuestros encabezados, cuerpo de la pagina, menus, distintas vinetas donde volcaremos toda la informacion visible de la misma.
+        Si queremos agregar parrafos a nuestro body, lo hacemos con la etiqueta <'p'></p>
+        <br/><br/>
+        <hr>
+        <h2 id="Main">Elemento Main</h2>
+        <p>
+            El contenido principal de nuestra pagina se va a encontrar dentro de la etiqueta <'main'>. El area principal del contenido consiste del contenido que esta directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicacion.
+            No debe haber mas de un contenido main en un documento y este no debe ser descendiente de un elemento, como por ej de un article, aside, footer, header o nav.
+        </p>
+        <br/><br/>
+        <hr>        
+        <h2 id="Listas">Listas</h2>
+        <p>Dentro de los elementos que podemos colocar en el body de la pagina tenemos las listas. Las listas pueden ser ordenadas(ol) o desordenadas(ul). Para colocar una lista, primero debemos colocar la vineta <'list'> y dentro de ella al tipo de lista que queremos armar <'ol'> o <'ul'>. Dentro de estas vinetas colocaremos nuestros elementos de lista dentro de vinetas <'li'> de listas.</p>
+        <list>
+            <ol>
+                <li>Head</li>
+                <li>Body</li>
+                <li>Elementos del body</li>
+            </ol>
+        </list>
+        <hr>
+        <h2>Listas de definicion</h2>
+        <p>
+            Las listas de definicion se abren con la etiqueta <'dl> y dentro llevan 2 etiquetas, <'dt>(definition term) y <'dd>(definition data). Por ej:
+        </p>
+        <dl>
+            <dt>HTML</dt>
+            <dd>Es un lenguaje de marcado que define el contenido de la web</dd>
+            <dt>CSS</dt>
+            <dd>Es un lenguaje de definicion que da estilos al codigo de HTML</dd>
+            <dt>Java Script</dt>
+            <dd>Es el lenguaje de la web.</dd>
+        </dl>
+        <br/><br/>
+        <hr>
+        <h2 id="Imagenes">Imagenes</h2>
+        <p>Otro de los elementoso que tenemos para nuestra pagina son las imagenes. Para colocar imagenes debemos utilizar la vineta <'img'> seguido de los siglas src="" en la cual colocaremos el link de la ubicacion dentro de nuestro ordenador de la imagen.
+        A la imagen le podemos dar altura con width y el ancho con height.</p>
+        <br/><br/>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/nav" target="_blank"><img src="../CSS y HTML/Imagenes/table.png" alt="Tabla de documentos HTML"></a>
+        <br/><br/>
+        <hr>
+        <h2 id="Links">Links</h2>
+        <p>
+            Para agregar links a nuestra pagina web utilizamos la etiqueta <'a'> seguido de un href(que refiere a hyper reference) seguido de un signo ="" y el link en custion, comenzando por https. Entre medio de ambas etiquetas colocaremos algo que haga referencia al link como el nombre de la pagina, o cualquier cosa que nosotros decidamos, y al hacer click sobre este se los redirigira hacia la direccion del link.
+            Si dentro de esta etiqueta colocamos el atributo 'target'='blank' logramos que al presionar en el link este se abra en otra pestana y nuestra pagina principal se mantenga. Otro atributo para los links es rel="noopener noreferrer" el cual nos permite evitar ataques llamados tapnabbing<a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+            Podemos crear tambien enlaces internos para navegar dentro de nuestra pagina. Para esto, a cada etiqueta hay que agregarle un ID por el cual navegaremos, una vez asignado el id, creamos la etiqueta <'a'> y en la href="#body" colocamos una almohadilla y el id que hayamos asignado a la etiqueta.
+            Tambien podemos convertir imagenes en links, para esto solamente debemos rodear la etiqueta de la imagen con una etiqueta de apertura de enlace(<'a'>) y una etiqueta de cierre(</'a'>) <br>
+            Dentro de los links, contamos con enlaces y protocolos especiales <br>
+            <a href="mailto:lucialp98@outlook.com">Enlace de mail</a> <br>
+            <a href="tel:+5493417193703">Enlace de telefono</a> <br>
+            <a href="https://api.whatsapp.com/send?phone=543413083001&text=Hola" target="_blank">Enlace Whatsapp</a>
+        </p>
+        <br/><br/>
+        <hr>
+        <h2 id="elementos-interactivos">Elementos interactivos</h2>
+        <button onclick="alert('Has clickeado el boton')">Esto es un boton</button> <br>
+        <p>Dentro de estos elementos interactivos, ademas de botones, tambien contamos con "acordeones" o informacion escondida, a la cual al hacerle click, nos revela toda esta informacion. <br></p>
+            <details style="color: yellow;">
+                <summary>Enlaces</summary>
+                <article><a href="https://www.youtube.com" target="_blank" title="youtube">Youtube</a></article>
+                <article><a href="https://wwww.google.com" target="_blank" title="google">Google</a></article>
+                <article><a href="https://www.twitter.com" target="_blank" title="twitter">Twitter</a></article>
+            </details>
+            <dialog style="color: red;" open>
+                Esto es una ventana modal en html <br>
+                En varios navegadores todavia no es soportada esta etiqueta.
+            </dialog>
+            <p>
+                Para saber que etiquetas son experimentales o no todavia, podemos buscarlas dentro de la pagina <a href="https://htmlreference.io" target="_blank">HTML Reference</a> o dentro de <a href="https://developer.mozilla.org/es/" target="_blank">Developers Mozilla</a>
+            </p>
+        <hr>
+        <h2 id="Tablas">Tablas</h2>
+        <p>Las tablas tienen estructuras que se dividen en cabeza de la tabla y cuerpo de la tabla. Dentro de la cabeza iran los 'Titulos' a los cuales describiremos dentro del cuerpo de la misma. Para colocar una tabla, en primer lugar debemos colocar la vineta <'table'>, una vez dentro de table colocaremos el <'thead'> que es para colocar los elementos de la cabeza de la tabla y cada elemento ira dentro de un <'tr'> <'td'>
+        Luego de colocar los elementos de la cabeza de nuestra tabla, colocaremos los elementos del cuerpo dentro de <'tbody'> que dentro tendra un <'tr'> y dentro de este estaran los elementos dentro de un <'td'></p>
+        <table>
+            <thead>
+                <tr>
+                    <td>Ocean</td>
+                    <td>Average Depth</td>
+                    <td>Maximun Depth</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pacific</td>
+                    <td>4280mt</td>
+                    <td>10911mt</td>
+                </tr>
+                <tr>
+                    <td>Atlantic</td>
+                    <td>3646mt</td>
+                    <td>8486mt</td>
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <table>
+            <thead>
+                <tr>
+                    <th colspan="3">Tabla de los caballeros del zodiaco</th>
+                </tr>
+                <tr>
+                <th>Nombre</th>
+                <th>Constelacion</th>
+                <th>Tipo de armadura</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ikki</td>
+                    <td>Fenix</td>
+                    <td>Plata</td>
+                </tr>
+                <tr>
+                    <td>Aioria</td>
+                    <td>Leo</td>
+                    <td>Oro</td>
+                </tr>
+                <tr>
+                    <td>Aioros</td>
+                    <td>Sagitario</td>
+                    <td>Oro</td>
+                </tr>
+                <tr>
+                    <td>Shaina</td>
+                    <td rowspan="2">Ofiuco</td>
+                    <td>Plata</td>
+                </tr>
+                <tr>
+                    <td>Odiseo</td>
+                    <td>Oro</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3"><small>Saint Seiya fue creado por Masami Kurumada</small></th>
+                </tr>
+            </tfoot>
+        </table>
+            <p>
+                Dentro de las tablas, tenemos algunos atributos para combinar o darles otro tamanos a las celdas. <br>
+                Uno de ellos es colspan, el cual nos permite elegir cuantas columnas queremos que ocupe esa columna en especifico. <br>
+                Otro de los atriubutos para aplicar cuantas filas queremos que ocupe nuestra fila es rowspan.
+            </p>
+        <hr>
+        <h2 id="Formularios">Formularios</h2>
+        <p>Los formularios son elementos muy importantes a la hora de crear un sitio web, ya que mediante ellos recopilamos informacion del usuario. Este elemento permite que el ususario ingrese diferentes tipos de informacion con diferentes tipos de entrada.
+        Para colocar un formulario utilizamos la vineta <'form'> seguido de una vineta <'input'>.
+        Para que estos datos que completamos en el formulario sean enviados a un servidor en el cual trabajemos debemos colocar dentro de la vineta de apertura <'form'> 'action=""' y dentro de las comillas colocar la direccion del archivo del servidor que recopilara estos datos. Como por el momento no trabajamos con un servidor lo completaremos con '/enviar-respuesta'
+        Si dentro de nuestro formulario queremos que sea requerida una respuesta si o si para poder ser enviado, utilizamos el atributo 'required' dentro de la etiqueta del input.
+        Tenemos diferentes tipos de formularios y a continuacion tenemos algunos ejemplos de estos.
+        Dentro de estos formularios tenemos diferentes atributos que podemos colocar, como por ej placeholder el cual coloca un texto dentro del formulario en el cual indicaremos que debe colocar el usuario. 
+        En el nombre de cada formulario colocaremos un nombre por el cual querramos llamarlo al momento de editarlo mediante css o usarlo mediante un automatizador.</p>
+        <form>
+            <!--Botones de texto-->
+            <label for="usuario">User</label>
+            <input type="text" placeholder="Usuario" name="usuario" href="0" id="usuario" required> <br>
+            <label for="password">Password</label>
+            <input type="password" placeholder="Password" name="password" id="password" required>
+            <div>
+                <p>Favorite color:</p>
+                <!--Botones de radio-->
+                <label><input name="color" type="radio" value="blue" required>Blue</label><!--Cuando a nuestro input le colcamos 'name' lo que hacemos es crear un grupo de formularios, para que nuestro navegador sepa que pertenecen al mismo grupo(si comparten el name) y solo nos permita seleccionar uno-->
+                <label><input name="color" type="radio" value="red" required checked>Red</label>
+                <label><input name="color" type="radio" value="green" required>Green</label>
+                <label><input name="color" type="radio" value="yellow" required>Yellow</label>
+            </br>
+
+            <!--Checkbox-->
+                <label for="checkbox1"><input name="checkbox" type="checkbox" id="checkbox1" checked>checkbox 1</label>
+                <label for="checkbox2"><input name="checkbox" type="checkbox" id="checkbox2">checkbox 2</label>
+        </br>
+            <!--Boton enviar-->
+                 <button type="submit">Enviar</button>
+        <br>
+            <!--Fecha-->
+            <input type="date">
+        <br>
+            <!--Color-->
+            <input type="color">
+        <br>
+            <!--Reset-->
+            <input type="reset">
+        <br>
+            <!--File-->
+            <input type="file">
+            <!--Si dentro de nuestro elemento file necesitamos poder seleccionar mas de un archivo, lo hacemos colocandole el atributo multuple-->
+            <br>
+            <input type="file" multiple>
+            <br>
+            <!--Email-->
+            <input type="email" placeholder="example@mail.com">
+            <br>
+            <!--Number-->
+            <input type="number" placeholder="+54934123456789">
+            <br>
+            <input type="tel">
+            <br>
+            <input type="search">
+            <br>
+            <textarea cols="50" rows="5"></textarea>
+            <br>
+            <select name="" id="">
+                <option value="">Seleciona una opcion</option>
+                <option value="">HTML</option>
+                <option value="">CSS</option>
+                <option value="">Java Script</option>
+                <option value="">PHP</option>
+                <option value="">Phyton</option>
+            </select>
+            <br>
+            <select name="" id="" multiple>
+                <option value="css">CSS</option>
+                <option value="html">HTML</option>
+                <option value="java">Java Script</option>
+                <option value="phyton">Phyton</option>
+                <option value="php">PHP</option>
+            </select>
+
+            </div>
+        
+        </form>
+        <p>
+            La etiqueta <'label'> nos sirve para que, al momento de colocar un formulario tipo radio podamos seleccionar la opcion haciendo click en el nombre y no solo en el boton circular para seleccionar la opcion. Para esto, debemos rodear nuestro formulario con esta etiqueta tanto en apertura <> como en cierre</>.
+        </p>
+        <p>
+            <strong>ATRIBUTO CHECKED</strong></br>
+            El atributo checked nos permite colocar alguna de las casillas de nuestros botones radio figura marcada por defecto al ingresar en la pagina. Este atributo se coloca dentro del elemento input.</br>
+        </br>
+            <strong>ATRIBUTO VALUE</strong></br> 
+            Este atributo nos permite enviar al servidor el valor del elemento seleccionado dentro de nuestro formulario.
+            Este atributo se coloca dentro del elemento input.
+        </p>
+        <br>
+        <p>
+        <strong>ATRIBUTO READ ONLY</strong><br>
+            Este atributo vuelve nuestro input de solo lectura, lo cual no nos permite modificar este texto.
+        </p>
+            <br>
+        <p>
+        <strong>DISABLE</strong><br>
+            Pone como deshabilitado el input, por lo cual figurara de un color gris oscuro, lo cual no nos deja modificar su contenido
+        </p>
+        <br>
+        <p>
+            <strong>FORM ACTION</strong>
+            Este form nos permite enviar la informacion de los input a la direccion que coloquemos dentro de la etiqueta action. <br>
+            La forma de colocarlo es <pre><code> <'form action ="https://paginadeejemplo.com"></code></pre>
+        </p>
+        <br>
+        <p>
+            <strong>METODO GET/POST</strong> <br>
+            Al momento de enviar datos a una URL mediante el action, el metodo que viene por defecto es GET. Lo que hace este metodo es enviar los datos, por ej, de usuario y password a esta URL, pero estos datos quedan expuestos en la misma. <br>
+            Por ej, si yo envio datos a la URL www.ejemplo.com/ al enviar estos datos con este metodo, esta URL quedara www.ejemplo.com/?usuario=usuario&password=password dejando nuestros datos expuestos. <br>
+            Con el metodo POST, estos datos quedan ocultos y no se mostraran en la URL a la cual los enviemos.
+        </p>
+        <br>
+        <p>
+            <strong>ATRIBUTO AUTOCOMPLETE</strong><br>
+            Si colocamos el atributo autocomplete dentro de nuestro form, tenemos la opcion de ponerlo como ON u OFF. Teniendolo encendido, al hacer click en el espacio de texto donde colocamos nuestro usuario, nos dara la oportunidad de autocompletar con los usuarios que hayamos agregado anteriormente. Si queremos evitar esto, colocaremos off en el autocomplete. 
+        </p>
+        <br/><br/>
+        <hr>
+        <h2>Formularios de contacto</h2>
+        <form action="">
+            <input type="text" name="nombre" placeholder="Escribe tu nombre" pattern="^[A-Za-z]+$" title="Solo acepta letras y espacios en blanco">
+            <input type="email" name="Correo" placeholder="Escribe tu correo" pattern="^\w+[/./-]?)(1,)@[a-z]+[/.]\w(2,)$" required title="Formato de correo invalido">
+            <br>
+            <textarea name="comentarios" cols="30" rows="10" required></textarea>
+            <br>
+            <input type="submit">
+        </form>
+        <br>
+        <hr>
+        <h2 id="Atributos">Atributos de texto</h2>
+            <p>Para la personalizacion de nuestros textos, tenemos diferentes atributos que podemos colocar para darle una personalizacion diferente. La etiqueta <'strong'> nos sirve para colocar el texto en <strong>negrita</strong>. Si lo que queremos es que nuestro texto este en <em>cursiva</em> utilizamos la etiqueta <'em'>
+            Para <s>tachar</s> texto utilizamos <'s'>.</p>
+            </br></br>
+            <hr>
+            <br>
+            <h2 id="Data">Data Atributes</h2> <br>
+            <p>
+                Los data atributes son atributos que podemos crear y personalizar en nuestras etiquetas que luego usaremos para entre otras cosas registrar datos, agregar otros atributos a esa etiqueta, mandar a llamar, etc. <br>
+                Para poder utilizar un data atribute es necesario dentro de la etiqueta a la cual se lo querramos agregar iniciar con un data seguido de un guion y finalizando con el nombre del atributo que deseemos crear. por ej: <br>
+                <pre>
+                    <code>
+                        <'h2' data-name="titulo"> Titulo <'/h2'>
+                    </code>
+                </pre>
+                <br>
+                <hr>
+            </p>
+            <h2 id="Linea">Linea horizontal en nuestra pagina web</h2>
+            <p>
+                Si queremos colocar una linea horizontal para separar cosas dentro de nuestra pagina web utilizamos la etiqueta <'hr'> lo cual colocara una linea separadora en el lugar donde lo colquemos.
+            </p>
+            <hr>
+        <h2 id="Elemento div">Elemento div</h2>
+        <p>
+            El elemento div es uno de los elementos mas importantes dentro del desarrollo web por su versatilidad.</br>
+            Es un contenedor personalizable mediante css.
+        </p>
+        <hr>
+        <h2 id="Pie de pagina">Pie de pagina</h2>
+        <p>
+            EL pie de pagina va colocado fuera de main, ya que no es parte de la pagina principal.</br>
+            La etiqueta para colocar el pie de pagina es <'footer'>.</br>
+            En el podemos colocar distintos contenidos, como texto con derecho de autor, etc.
+        </p>
+        <hr>
+        <h2 id="etiqueta-de-formateo">Etiquetas de formateo</h2>
+        <pre>
+            La etiqueta <'pre> nos permite escribir de forma tal que,
+            lo que pogamos dentro de la misma se respetara los saltos de linea y las
+                indentaciones que pongamos, ademas de darnos otra tipografia.
+        </pre>
+        <pre>
+        <code>
+            La etiqueta <'code> va dentro de un <'pre>
+            Nos sirve para, por ej, poner formatos de codigo.
+            Ej:
+            class Fernando():
+                __init__(self, name, edad):
+                self_edad = edad
+                self_name = name 
+
+                self str(self):
+                return "
+                Nombre = {}\n 
+                Edad = {}".format(self.nombre, self.edad)
+
+        </code>
+        </pre>
+        <h2 id="etiquetas-semanticas">Etiquetas Semanticas Estructurales</h2>
+        <p>
+            H1 - solo puede existir uno por pagina.</br>
+            Div - es una etiqueta que no tiene semantica. Es una etiqueta de bloque. Una etiqueta de bloque es aquella que genera saltos de linea con sus etiquetas hermanas.</br>
+            Header - Cabecera de un sitio web o de una seccion.</br>
+            Main - Define la seccion principal del documento html.</br>
+            Footer - Pie de pagina de una web.</br>
+            Nav - Representa una navegacion.</br>
+            Article - Representa una seccion autocontenida.</br>
+            Aside - Contenido complementario o secundario(por ej, en un aside es valico colocar publicidad).</br>
+            Section - Representa una seccion de contenido generico.</br>
+            Address - Representa una informacion de contacto.</br>
+            Las etiqueta semanticas son muy subjetivas, dependen del contenido.
+        </p>
+        <hr>
+        <h2 id="bloque-linea">Etiqueta de bloque vs etiquetas de linea</h2>
+        <p>
+            La etiqueta de bloque por excelencia es la div; la etiqueta de linea por excelencia es la span(es un contenedor generico en linea, no tiene carga semantica). Una etiqueta de linea solo ocupa el espacio necesario que tiene su contenido.</br>
+        </p>
+        <hr>
+        <h2 id="scrip">Scripts en html</h2>
+        <p>
+            La primera forma de llamar un documento scrip es mediante su etiqueta <'script>. Esta se coloca al final de nuestro archivo html, justo antes del final de body.</br>
+            Otra forma, es a travez de un archivo .js, que se agrega de la misma manera, entre etiquetas <'script> con la diferencia que dentro de la etiqueta ponemos un src(source) con la ruta donde se encuentra nuestro archivo .js.</br>
+            Ej: <'script src="../CSS y HTML/archivo.js"><'/script>.</br>
+        </p>
+        <hr>
+        <h2 id="video">Audio y Video</h2>
+        <p>A nuestras web podemos agregarles archivos multimedia, los cuales deberan contar con ciertos atributos para poder ser visualizados dentro de nuestra web. <br>
+        Para ello, debemos utilizar la etiqueta <'audio> o la etiqueta <'video>, las cuales al igual que las imagenes, dentro de la etiqueta de apertura van acompanadas de un src=""(source) con la direccion en la cual se encuentra nuestro archivo. <br>
+        Para que nuestro archivo audio sea visualizado, la etiqueta debe ir acompanada del atriburo booleano llamado 'controls' lo cual hara que aparezca un reproductor de audio que nos permitira reproducir el archivo. El diseno de este reproductor de audio variara dependiendo del navegador. <br>
+        Para nuestro audio tenemos algunos atributos booleanos que podemos aplicar, como por ej autoplay, el cual hace que cada vez que ingresemos a la pagina el audio se reproduzca, tambien loop, para que el audio se reproduzca en loop. Otro que podemos utilizar es mute, el cual mutea por defecto al audio, tambien tenemos preload, el cual ayuda para que cuando el usuario le de play al audio este ya este pre cargado.</p>
+        <audio src="media/home%20by%20zach-sorgen%20Artlist.mp3" controls autoplay loop></audio> <br>
+        <video src="media/RPReplay_Final1639108669.mov" controls loop preload ></video>
+        <br>
+        <hr>
+        <h2 id="iframes">Iframes</h2>
+        <p>
+            El iframe es un contexto de navagacion anidado, el cual nos permite incrustar otra pagina HTML en la pagina actual. <br>
+            Debido a que cada contexto de navegacion es un entorno de documento completo, cada iframe en una pagina requiere mas memoria y otros recursos informaticos. <br>
+            Hay varias pagias con proteccion la cual hace que no podamos utilizarlas dentro de los iframes.
+        </p>
+        <iframe src="CSSresumen.html" frameborder="5"></iframe>
+        <br>
+        <hr>
+        <h2 id="meta-etiqueta">Meta etiquetas para Redes Sociales</h2>
+        <p>
+            Las meta etiquetas son muy importantes para nuestras webs, estas se encuentran dentro del contenido no visible de nuestro codigo HTML, es decir, dentro de la etiqueta head. <br>
+            Dentro de las meta etiquetas, contamos con Description, la cual da una breve descripcion que nosotros pongamos acerca de nuestra web la cual aparecera en los buscadores(por ej Google), y ayudara a que nuestra web sea mas facil de encontrar. <br>
+            Tambien tenemos las meta etiquetas </p>
+            <pre>
+                <code><'link name="icon" href="direccion del icono">
+                <'link name="apple-touch-icon" href="direccion del icono">  
+                </code>
+            </pre>
+            <p>
+            Estas etiquetas se utilizan para darle iconos a la pestana de nuestra web, como asi tambien un icono a nuestra web dentro de los dispositivos moviles. <br>
+            Tambien contamos con meta etiquetas para el uso de nuestra web dentro de redes sociales, que por ej, crearan tarjetas con resumenes de nuestra web al colocar el link dentro de ellas. <br><br>
+            Un ej de estas: <br><img src="https://oinkmygod.com/wp-content/uploads/2018/09/ejemplo-open-graph-brightedge.jpg" width="350px" height="300px">
+            <br><br>
+            Estas meta etiquetas son: <br>
+            <pre>
+                <code>
+                    <'meta property="og:title" content="Titulo de tu web">
+                    <'meta property="og:description" content="Descripcion de tu web">
+                    <'meta property="og:image" content="url de la imagen que ira en la tarjeta">
+                    <'meta property="og:url" content="url de la web la cual estamos compartiendo la tarjeta"
+                </code>
+            </pre>
+            </p>
+            <br>
+            <hr>
+            <h2 id="accesibilidad">Accesibilidad Web</h2>
+            <p>
+                Para hacer mas accesible a nuestra web, tenemos diferentes atributos que ayudaran a diferentes personas con algunas discapacidades a poder navegar sin problemas a traves de nuestra pagina. <br>
+                Estos atributos nos permiten que personas que utilizan lectores, ya que no pueden ver, este lector pueda leerle el contenido de nuestra web con los atributos: <br>
+                role, tabindex, aria-label y muchos otros mas, ya que el mundo de la accesibilidad web es muy amplio. Vamos a ver un ej: <br>
+                <h3 role="title">Las estaciones del anio</h3>
+                <ul>
+                    <li tabindex="1" role="listitem">Primavera</li>
+                    <li tabindex="2" role="listitem">Verano</li>
+                    <li tabindex="3" role="listitem">Otono</li>
+                    <li tabindex="4" role="listitem">Invierno</li>
+                </ul>
+                <a role="link" aria-label="En este enlace encontraras mas informacion sobre las estaciones" target="_blank" href="#">Para mas informacion</a>
+            </p>    
+        
+
+    </main>
+    <hr>
+    <footer>
+        <p> Fernando Gatti</br>
+            Email - Fernandogatti74@gmail.com</br>
+            Rosario, Santa Fe, Argentina.</p>
+        <a href="https://www.linkedin.com/in/fernando-jesús-gatti-3823a91b7/" target="_blank" title="Perfil de linkedin"><img src="https://scontent.fros2-1.fna.fbcdn.net/v/t1.6435-9/140200567_3701904069871206_3564430137094154532_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFOcOq9V2DGlJ-SfRj331wZKa4FXw_q1aUprgVfD-rVpdr6gFD6c_zU9gBa2owLPTD3DI9HzvLarnCPhsE8lhMn&_nc_ohc=aoB_UoHaVV8AX9X3XlK&_nc_ht=scontent.fros2-1.fna&oh=f5fd021292ba4cafcd676af7ffb2ff23&oe=61D84082" class="perfil" alt="foto-de-perfil"></a>
+    </footer> 
+
+        
+<script>
+console.log("Hola, estamos aprendiendo html");
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+body{
+    background: url(https://p4.wallpaperbetter.com/wallpaper/173/954/480/shovel-knight-video-games-pixel-art-retro-games-8-bit-16-bit-wallpaper-preview.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+/* Con background-size 100% generamos que nuestra imagen cubra el 100% de la pagina, luego con el background-repet no-repeat hacemos que la imagen sea completa y no se repita, y por ultimo con el background-attachment fixed hacemos que la imagen se mantenga firme en el fonde mientras hacemos scroll por la pagina. */
+
+}
+header{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    letter-spacing: 2px;
+    padding: 30px 20px;
+    text-decoration: none; 
+    /* colocando el valor none a text-decoration le quitamos el subrayado que venia en el texto. */
+}
+#estilo{
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+h2 {
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+.selectores {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#selectores {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    color: coral;
+}
+p{
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+a{
+    text-decoration: none;
+}
+.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+    float: left;
+}
+#codigo{
+    width: 350px;
+    height: 150px;
+    border-width: 3px;
+    border-color: whitesmoke;
+    border-style: outset;
+    justify-content: space-around;
+    padding: 20px 10px;
+    background-color: black;
+    
+}
+.imagen-selectores {
+    width: 400px;
+    height: 200px;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+}
+#twitter{
+    top: 80px;
+    left: 90px;
+    display: flex;
+    position: absolute;
+    z-index: 10;
+}
+#face{
+    position: absolute;
+    top: 80px;
+    left: 140px;
+    width: 30px;
+    height: 30px;
+}
+#insta{
+    position: absolute;
+    top: 80px;
+    left: 190px;
+    width: 30px;
+    height: 30px;
+}
+#lista{
+    list-style: none;
+    display: flex;
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 2px;
+    transition: 0.7s;
+/* A esta lista le aplicamos atributos para que deje su orden descendente y se coloquen los elemetos uno al lado del otro, con list-style none le quitamos los puntos a cada elemento y con letter-spacing le damos un espacio de 2 pixeles entre cada letra. */
+}
+#ind{
+    color: yellow;
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+}
+#lista *:hover{
+    color: red !important;
+}

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movimiento en CSS</title>
+    <link rel="stylesheet" href="movimiento.css">
+</head>
+<body>
+    <h1>Movimiento en CSS</h1>
+    <section class="transition">
+        <h2>Transiciones</h2>
+            <p>
+                Para las transiciones contamos con transition, el cual cuenta con las siguientes propiedades: <br>
+                - transition-property <br>
+                - transition-duration <br>
+                - transition-timing-function: none linear ease ease-in ease-out ease-in-out steps <br>
+                - transition-delay <br>
+                o directamente podemos aplicar todo eso en una sola linea con: <br>
+                - transition: (valor de property) (valor de duration) (valor de timing-function) (valor de delay) <br>
+                Para poder aplicar estas transiciones debemos utilizar el pseudoelemento hover para que tengan efecto por ej al posar nuestro cursor sobre el elemento el cual queremos que se transforme. <br>
+                En el hover colocamos los cambios que queremos que se apliquen, como bg-color, border-radius, border, etc. <br>
+                Como buena practica, al usar la property all no debemos sobrecargar de transiciones al elemento para que no colapse el navegador ni la animacion.
+            </p>
+        <div class="box"></div>
+        <article class="card">
+            <img src="../Imagenes/istockphoto-1189089727-170667a.jpeg" alt="Sol 8bit">
+        </article>
+    </section>
+    <p>
+        No todas los elementos de HTML son animables, por lo cual podremos saber cuales puede ser animados desde la siguiente lista: <br>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties">Propiedades animables</a> <br>
+        Para la animacion de la box con la imagen, no utilizamos la palabra reservada all en transition para poder aplicar transition especifica para cada uno de los efectos que quizimos aplicar. <br>
+        Utilizar mucho transition all es una mala practica si no contamos con el control del 100% de nuestras animaciones. <br>
+        <br>
+        <p>
+            Podremos notar, que, al cargar nuestra pagina algunas animaciones pueden verse aunque no esten por ej en estado hover. Esto se debe a que transition es una propiedad de CSS y esta rige por las reglas de CSS que son Cascada, especificidad y herencia. <br>
+            Por lo cual, si nosotros notamos un cambio del background-color o por ej del border-color es porque cuando la pagina carga, por ej de una caja que hayamos creado con fondo base y color de border base, estos colores son blanco y negro, y seran los primeros en cargar, luego cargaran en forma de transicion el resto de los colores que hayamos aplicado luego.
+        </p>
+    </p>
+    <hr>
+    <section class="transform">
+        <h2>Tranformaciones</h2>
+        <h3>Transformaciones en 2D</h3>
+        <article class="card transform-2d">
+            <img src="../Imagenes/istockphoto-1189089727-170667a.jpeg" alt="Sol 8bit">
+        </article>
+        <p>
+            En las transformaciones, tenemos las propiedades scale, translate, rotate(en deg/grados), skew(en deg/grados) y matrix. <br>
+            Matrix recibe 6 valores los cuales son: matrix: (scaleX(), skewY(), scaleY(), translateX(), translateY()). Y a diferencia del resto, esta propiedad recibe valores enteros, y la unica escala que no afecta es la rotacion. <br>
+            Al igual que los filtros, podemos aplicar todas estas transformaciones en una sola linea, separadas por un espacio en blanco entre cada una.
+        </p>
+        <br>
+        <h3>Transformaciones en 3D</h3>
+        <article class="card transform-3d">
+            <img src="../Imagenes/istockphoto-1189089727-170667a.jpeg" alt="Sol 8bit">
+        </article>
+        <p>
+            Para nuestras transformaciones en 3D es necesario activar la perspectiva, la cual podemos aplicarla dentro de la misma linea que apliquemos las transformaciones 3D, o para no tener tanto codigo en una misma linea, se la podemos aplicar previamente al elemento padre. La perspectiva puede ser tanto en rem, px, u otra de las medidas ya conocidas, y mientras mayor sea el numero, menor sera la velocidad de transformacion, y en contrario, mientras menor sea la perspectiva mas rapido se transformara el elemento, como tambien mayor sera su tamaño, por lo cual hay que manejar un numero regular el cual podria ser 100px o 10rems. <br>
+            Para tomar como referencia, visitemos <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d()">Mozilla developers</a> <br>
+            Una vez que activamos la perspectiva, la rotacion en X y en Y cambiara con respecto a la que vimos anteriormente sin esta funcion activada.
+        </p>
+        <h3>Transform origin</h3>
+        <article class="card transform-origin">
+            <img src="../Imagenes/istockphoto-1189089727-170667a.jpeg" alt="Sol 8bit">
+        </article>
+        <p>
+            En transform origin aplicamos donde queremos que sea el centro de la imagen en la cual se anclaran las transformaciones. <br>
+            Por defecto, viene aplicado al centro de la imagen con los valores en x, y, z que son 50% 50% 0 respectivamente.
+        </p>
+        <h3>Flip cards</h3>
+        <article class="flip-card-1">
+            <div class="flip-face flip-front">
+                <img src="../Imagenes/Charmander.png" alt="Charmander">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="../Imagenes/Charizard.png" alt="Charizard">
+            </div>
+        </article>
+        <br>
+        <article class="flip-card-2">
+            <div class="flip-face flip-front">
+                <img src="../Imagenes/Charmander.png" alt="Charmander">
+            </div>
+            <div class="flip-face flip-back">
+                <img src="../Imagenes/Charizard.png" alt="Charizard">
+            </div>
+        </article>
+        <p>
+            Para crear estas flip cards tenemos que utilizar la propiedad transform-style, la cual generara que el elemento padre contenga elementos hijos los cuales hereden y mantengan las propiedades de transformacion 3d. Esta propiedad viene con el valor 'flat', para poder dar el efecto flip card debemos utilizar el valor 'preserve-3d', el cual mantiene una forma 3d de nuestro elemento y ambas imagenes puedan convivir en la parte frontal y trasera como un objeto en 3 dimensiones.
+            A su vez, este tiene que ir acompañado de una propiedad en los elementos hijos llamada 'backface-visibility' la cual viene por defecto el valor 'visibility', y aplicarle el valor 'hidden' lo que genera que la cara trasera de nuestro objeto se encuentre escondida.
+            A las imagenes, ademas de adaptarlas a la carta, lo que hicimos fue darle un valor predeterminado de rotacion en Y. A la frontal la dejamos en el valor de origen (0) y a la trasera le colocamos un valor de inicio de 180deg. <br>
+            Una vez hecho esto, solamente aplicamos un estado hover en el cual le damos una rotacion de 180deg lo que hara que nuestra cara principal quede oculta y se pueda ver la segunda imagen.
+        </p>
+    </section>
+    <hr>
+    <section class="animations">
+        <h2>Animaciones</h2>
+        <article class="card my-animation">
+            <img src="../Imagenes/Charizard.png" alt="Charizard">
+        </article>
+        <p>
+            Para las animaciones tenemos la propiedad 'animation' tenemos los valores name(nombre de la animacion, que luego explicaremos el uso) duration(tiepo de duracion) timing-function(tiempo de funcion) delay iteration-count(cantidad de veces que se hara) direction fill-mode play-state(estado de la animacion).
+            Una vez definidos estos valores, utilizamos @keyframes seguido del nombre de nuestra animacion y aca es donde empezamos a aplicar estas transformaciones o animaciones que buscamos. <br>
+            Para ello, una vez llamado el keyframes debemos utilizar 'from' y 'to' para definir los estados de nuestra animacion al comienzo y al final. En el ej que aplicamos, en 'to' pusimos que al comienzo se encuentre con una opacidad de 0 y haga una transicion a una opacidad de 1, como asi tambien movimos en el eje x nuestra imagen desde el origen(0) hasta un 70% en ese mismo eje.
+        </p>
+        <p>
+            El @keyframes tiene una linea de tiempo, a la cual nosotros definimos cuando definimos la duracion de nuestra animacion, y trabajamos sobre ella con el from y el to, lo cual equivale al comienzo y al final. Pero si nosotros queremos trabajar en el medio de la animacion, podemos reemplazar el from y el to por porcentajes. Por ej, en lugar del from podemos colocar 0% y en lugar del to podemos colocar 100%, luego en el medio de estos podemos colocar otros porcentajes donde queremos que nuestra animacion tenga cambios.
+        </p>
+        <article class="card my-animation2">
+            <img src="../Imagenes/Charizard.png" alt="Charizard">
+        </article>
+    </section>
+        <br>
+        <section class="motion-examples">
+            <h2>Motion Examples</h2>
+            <h3>Fade in - Fade Out</h3>
+            <article class="fade fade-in">👨🏻</article>
+            <article class="fade fade-out">👨🏻</article>
+            <h3>Shake</h3>
+            <article class="shake">☕️</article>
+            <h3>Pulsación</h3>
+            <article class="pulsacion">🫀</article>
+            <h3>Spinner/Loader</h3>
+            <article class="spinner"></article>
+            <h3>Botones animados</h3>
+            <button class="btn anim-bottom to-left">Animacion Izquierda</button>
+            <button class="btn anim-bottom to-right">Animacion Derecha</button>
+            <button class="btn anim-bottom to-center">Animacion al centro</button>
+            <button class="btn anim-bg-gradient">Fondo con gradiente</button>
+            <h3>Menu de pestañas</h3>
+            <nav class="tabs-menu">
+                <input type="radio" id="tab-1" name="tabs">
+                <label for="tab-1">Section 1</label>
+                <input type="radio" id="tab-2" name="tabs">
+                <label for="tab-2">Section 2</label>
+                <input type="radio" id="tab-3" name="tabs">
+                <label for="tab-3">Section 3</label>
+                <input type="radio" id="tab-4" name="tabs">
+                <label for="tab-4">Section 4</label>
+                <div class="tabs-bg-hover"></div>
+            </nav>
+            <h3> Menu Off Canvas</h3>
+                <input type="checkbox" class="off-canvas-btn">
+                <label class="off-canvas-burger"> </label>
+                <nav class="off-canvas-menu">
+                    <div class="off-canvas-menu-container">
+                        <a href="#" class="off-canvas-link"> Sección 1</a>
+                        <a href="#" class="off-canvas-link"> Sección 2</a>
+                        <a href="#" class="off-canvas-link"> Sección 3</a>
+                        <a href="#" class="off-canvas-link"> Sección 4</a>
+                        <a href="#" class="off-canvas-link"> Sección 5</a>
+                    </div>
+                    </nav>
+                    <p>
+                        Para crear este menu off canvas, lo que primero debemos hacer es crear un input junto con su label al cual nombraremos como canvas buttom y canvas burger(se refiere asi por su forma de hamburgesa en las 3 lineas). <br>
+                        Una vez creado este boton, el cual servira para abrir y cerrar el menu, creamos un nav, el cual contendra a nuestro menu y nos servira para la maquetacion. <br>
+                        Luego de esto, dentro del nav crearemos un div el cual contendra el contenido de nuestro menu, y finalmente los links los cuales seran el menu que formaremos. <br>
+                        Una vez creado todo esto, lo primero que debemos hacer es formar nuestra burger, el cual crearemos a partir del checkbox, al que le daremos posicionamiento fijo, le daremos el numero mas alto de z index y le quitaremos la opacidad, ya que solo utilizaremos su funcion como checkbox, pero no tenemos neceidad de verlo. <br>
+                        Una vez hecho esto, vamos a darle forma a la burger, ubicandola en el mismo lugar del checkbox, con un z index mas pequeño que este, con posicionamiento fijo y lo maquetaremos a la mitad del checkbox. <br>
+                        Con los pseudoelementos after y before crearemos 2 lineas identicas a nuestro primer elemento, ubicandolos 1 arriba y el otro abajo mediante el translate. <br>
+                        Con el pseudoelemento checked en el elemento button, utilizando las herencias, en este caso hermano adyacente(con el simbolo +) para que cuando se aplique el estado checked al boton, este elemento hermano sufra las modificaciones, le aplicamos una transformacion para que, el elemento del medio de la burger desaparezca, y los otros dos roten para formar una cruz, dandole transicion para darle animacion.
+                        Luego modificaremos con CSS el contenido de nuestro menu, para que ocupe toda la pantalla, en estado hover se modifique el color de fondo de cada link, y modificaremos el translate de nuestro menu a 0 en x y -100% en Y(de esta manera, haremos que desaparezca el menu) y mediante las herencias, haremos que cuando el checkbox este checked, el menu sufra un translate a 0,0 y aparezca nuevamente en la pantalla. <br>
+                        Esta es una explicacion super rustica de lo que acabamos de hacer, la cual podemos chequear en nuestro archivo CSS, donde podremos ver cada paso hecho en este ejercicio.
+                    </p>
+        </section>
+        <hr>
+
+    
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo de Caja en CSS</title>
+    <link rel="stylesheet" href="box-model.css">
+</head>
+<body>
+    <h1>Modelo de Caja en CSS</h1>
+    <span class="link"><a href="https://developer.mozilla.org/es/docs/Web/CSS/CSS_Box_Model" target="_blank">Modelo de Caja</a></span>
+    <p>
+    Modelo de caja: Es la forma en la que CSS ve a los elementos HTML, tomando en cuenta sus diensiones (width & height) <br>
+    Y como los ve? Como si fueran cajas con las siguientes propiedades: <br> <br>
+    1- El contenido (content): El contenido, en su mayoria texto, del elemento HTML. <br>
+    2- El borde (border): Lo que delimita cada uno de los elementos HTML. <br>
+    3- El relleno (padding): Son las distancias internas (la distancia del borde al contenido). <br>
+    4- El margen (margin): Son las distancias externas (La distancia entre el elemento HTML y sus elementos hermanos o padres). <br>
+    <br>
+    Dentro del modelo de caja hay que considerar que una caja tendra 4 lados: <br>
+    1- Arriba (top) <br>
+    2- Derecha (right) <br>
+    3- Abajo (bottom) <br>
+    4- Izquierda (left) <br>
+    
+    </p>
+    <div class="div-uno">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti incidunt nesciunt architecto odio in perferendis ad veniam minus consectetur, ex quod eaque maxime distinctio veritatis autem quo inventore voluptatum dolorum!</div>
+    <div class="div-dos">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore mollitia harum, ducimus repudiandae dicta quasi optio ab iure, qui aperiam placeat, quisquam eum veritatis nulla perferendis quae esse. Ducimus, enim!</div>
+    <br>
+    <h2>Propiedad Display</h2>
+    <p>
+        -Inline: Se comporta como un elemento en linea, puede aplicarse a elementos de bloque para cambiar sus caracteristicas <br>
+        -Block: Se comporta como un elemento de bloque, puede aplicarse a elementos de linea para cambiar sus caracteristicas <br>
+        -inline-block: Se comporta como un elemento de linea pero acepta modificar sus dimensiones(alto y ancho) <br>
+        -None: oculta el elemento <br>
+        -Table: display que viene por defecto en las tablas <br>
+        -List: display que viene por defecto en las listas <br>
+        -Flex: flexbox css <br>
+        -Grid: Grid Css
+    </p>
+    <div class="caja-none">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur a voluptatibus provident minima sint officiis cupiditate aperiam corrupti pariatur quam quae vero repudiandae culpa odit blanditiis, perferendis enim iure nemo.</div>
+    <span class="caja-linea">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit ullam molestias maxime. Voluptatum, enim dolorum? Ratione exercitationem ipsam facilis, natus tempore porro fugit cumque ducimus tempora corrupti similique! Nam, necessitatibus?</span>
+    <br>
+    <hr>
+    <h2>Propiedad Visibitily</h2>
+    <div class="caja-hiden">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit, laborum qui quisquam dignissimos laboriosam voluptates cupiditate adipisci ut accusamus doloremque repellat explicabo velit deserunt perspiciatis distinctio sint repudiandae enim fugit.</div> <br>
+    <p>A diferencia del display none, la propiedad visibility nos permite ocultar elementos pero no en un 100%, ya que el elemento sigue ocupando el espacio aunque este no este visible.</p>
+    <br>
+    <h2>Overflow</h2>
+    <p>
+        El overflow hace referencia a todo aquello que no entre dentro de nuestro elemento, como por ej texto. <br>
+        Si el contenido de la caja se encuentra desbordado, con la propiedad overflow podemos solventarlo de diferentes maneras.
+    </p>
+    <br>
+    <p class="overflow">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, nulla ratione quos eos deleniti ipsam quas neque aspernatur eligendi dolor quibusdam odio velit, at, nihil mollitia atque amet iste. Ipsa.
+    </p>
+    <hr>
+    <br>
+    <h2>Tamano de Caja</h2>
+    <div class="box-sizing-content">
+        Utilizando el box-sizing que viene por defecto, el cual es content box, nuestra caja, a pesar de que le demos un width y un height, se vera modificada cada vez que le agreguemos padding, border, etc. <br>
+        Cada px que agreguemos de padding, border, etc se sumara al tamano total de nuestra caja.
+    </div>
+    <div class="box-sizing-border">
+        En cambio, utilizando la propiedad box sizing border, el tamano de nuestra caja se empieza a considerar desde el borde, es decir, que cada padding, cada border, etc se comienza a considerar dentro del tamano que nosotros dispongamos de la caja. Por lo cual, si le damos un height y un width, este no se modificara en el total cuando anadamos px de otras cosas, sino que reducira el tamano del contenido dependiendo de las propiedades que le vayamos agregando.
+    </div>
+    <br>
+    <article class="container-col-3">
+        <section class="item">Seccion 1</section>
+        <section class="item">Seccion 2</section>
+        <section class="item">Seccion 3</section>
+
+    </article>
+    <br>
+    <hr>
+    <h2>Propiedad Float & Clear</h2>
+    <p>
+        La propiedad float nos permite flotar a los elementos hacia la izquierda o la derecha. <br>
+        Por defecto esta propiedad viene como float none. <br>
+        Aunque con la aparicion de GRID y Flexbox esta propiedad quedo en desuso, siempre es bueno saber como utilizarla. <br>
+        Para complementar con el float, existe la propiedad clear, la cual nos ayuda a que nuestros elementos no se superpongan al momento de aplicarles el float, como vamos a ver a continuacion: <br>
+    </p>
+    <article>
+        <section class="float-left">este elemento flota a la izquierda</section>
+        <section class="float-right">este elemento flota a la derecha</section>
+    </article>
+    <div class="clearfix"></div>
+    <article>
+        <section>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis illo soluta animi, suscipit nisi obcaecati. Aspernatur amet consequatur pariatur error incidunt minima maxime, dolorum laboriosam eius sunt repudiandae? Magni, corrupti?</section>
+    </article>
+    <br>
+    <hr>
+    <h2>Colapso de Margenes verticales</h2>
+    <p>
+        Al intentar darle margenes a nuestros arcitulos, uno pensaria que estos se suman si nosotros aplicamos margin top y margin botom, pero en lugar de esto, estos margenes se superponen haciendo que colapsen. <br>
+        Por este motivo, es recomendable solo utilizar uno de los dos, ya sea margin top o margin botom. <br>
+        Caso contrario, esto es lo que ocurre:
+    </p>
+    <article class="margin-top">
+        <section class="section-vertical">section 1</section>
+        <section class="section-vertical">section 2</section>
+    </article>
+    <br>
+    <p>
+        Como mencionamos anteriormente, pese a que esos section tienen margin top y margin botom, solo se puede apreciar uno, ya que se super ponen y colapsan.
+    </p>
+    <h2>Margenes horizontales</h2>
+    <p>
+        A Diferencia de los anteriormente mensionados, los margenes horizontales si se suman y conviven entre ellos. <br>
+        Si por ej, aplico 16px de margen right y 16ox de margen left, el total del espaciado sera de 32px.
+    </p>
+    <article class="horizontal">
+        <section>section 1</section>
+        <section>section 2</section>
+    </article>
+    <br>
+    <hr>
+    <h2>Centrado de cajas</h2>
+    <article class="sitio-web">
+        <header>Cabecera</header>
+        <main>Contenido Principal</main>
+        <footer>Pie de pagina</footer>
+    </article>
+
+
+
+
+
+
+</body>
+</html>

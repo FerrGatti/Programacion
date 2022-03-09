@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+ <!-- class="dark-mode"  -->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Efectos y Movimiento</title>
+    <link rel="stylesheet" href="efectos-movimientos.css">
+</head>
+<body>
+    <h1>Efectos visuales en CSS</h1>
+    <br>
+    <hr>
+    <h2>Sombras</h2>
+    <p>
+        Tenemos 3 tipos de sombras: <br>
+        Sombra a la caja. <br>
+        Sombra al texto. <br>
+        El filtro dropshadow. <br>
+
+    </p>
+    <div class="box box-shadow">Sombra</div> 
+    <br> <br>
+    <p>
+        Tambien podemos aplicar sombras multiples, separando los valores de las diferentes sombras mediante una coma.
+    </p>
+    <br>
+    <div class="box shadows-multiples"></div>
+    <br><br><br><br>
+    <p>
+        Dentro de los distintos filtros con los cuales contamos, esta dropshadow, al mismo lo vamos a ver a continuacion. <br>
+        Este filtro aplica para imagenes, donde se destaca mas en las png, detectando los limites de la imagen en custion y aplicando una sombra sobre ellos.
+    </p>
+    <br>
+    <div class="box drop-shadow">
+        <img src="https://static.vecteezy.com/system/resources/previews/001/199/874/non_2x/silhouettes-soccer-png.png" alt="silueta">
+    </div> 
+    <br><br>
+    <p>
+        Al igual que la sombra al texto, drop-shadow tiene las mismas propiedades, las cuales son movimiento-x movimiento-y y blur.
+    </p>
+    <h2>Degradados</h2>
+    <br>
+    <h3>Degradado lineal</h3>
+    <div class="box deg-lineal"></div>
+    <br>
+    <h3>Degradado Radial</h3>
+    <div class="box deg-radius"></div>
+    <br>
+    <h3>Conic Gradient</h3>
+    <div class="box conic-gradient"></div>
+    <h3>Repeat gradient</h3>
+    <div class="box repeat-lineal-gradient"></div>
+    <br>
+    <div class="box repeat-radial-gradient"></div>
+    <br>
+    <div class="box repeat-conic-gradient"></div>
+    <br>
+    <h3>Graficas con degradados</h3>
+    <div class="box grafica-pastel"></div>
+    <br>
+    <div class="box grafica-dona"></div>
+    <br>
+    <h3>Filtros en imagenes</h3>
+    <article class="card">
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno">
+    </article>
+    <br>
+    <p>
+        Dentro del archivo CSS tenemos en comentarios distintas informaciones que necesitamos saber sobre todas las aplicaciones que hicimos en esta pagina.
+        Del tema de filtros, podemos aplicar filtros multiples separando nuestros filtros y sus especificaciones separadas por espacios.
+    </p>
+    <h3>Filtros a fondos</h3>
+    <article class="card relative">
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno">
+        <div class="backdrop-filter">
+            <h4>Planeta Saturno</h4>
+        </div>
+    </article>
+    <h2>Dark mode en imagenes</h2>
+    <p>Podemos utilizar el filtro invert para poder aplicar modos claros u oscuros. <br>
+        Para esto, debemos tener en cuenta que al aplicar el filtro invert en la etiqueta html o body, este se aplicara a todos nuestros elementos como por ej las imagenes, luego debemos volver a aplicarlo directamente a estas para que vuelvan a su filtro original. <br>
+        Por ej, si aplico una clase Dark-mode en html, esto va a invertir los colores de todo, incluyendo las imagenes. <br>
+        Una vez aplicado, debemos llamar a esta clase seguido de img para que aplique a todas las imagenes, y a este aplicamos nuevamente el filtro invert para que estas se inviertan de nuevo volviendo a su color original.
+    </p>
+    <hr>
+    <br>
+    <h2>Modo de mezcla</h2>
+    <h3>Blend-mode con imagenes</h3>
+    <p>
+        Los modos de mezcla nos permiten, entre otras cosas, mezclar diferentes imagenes de varias maneras, las cuales vamos a estar viendo a continuacion. <br>
+    </p>
+    <article class="card relative blend-modes">
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno">
+        <img class="absolute" src="https://media.istockphoto.com/photos/panorama-of-dramatic-sunset-in-the-city-picture-id1031034230?b=1&k=20&m=1031034230&s=170667a&w=0&h=52kc_05pL8JFT2VGWUYCkOLQtF7-zaGqNXCiG6PqVwM=" alt="Sunset">
+    </article>
+    <br>
+    <h3>Blend-modes con fondos</h3>
+    <article class="card bg-blend-modes"></article>
+    <br>
+    <h3>Mascaras</h3>
+    <article class="card clip-path">
+        <img src="https://media.istockphoto.com/photos/panorama-of-dramatic-sunset-in-the-city-picture-id1031034230?b=1&k=20&m=1031034230&s=170667a&w=0&h=52kc_05pL8JFT2VGWUYCkOLQtF7-zaGqNXCiG6PqVwM=" alt="Sunset">
+    </article>
+    <p>
+        Para crear estas mascaras/formas tenemos varias maneras. <br>
+        Utilizando los distintos tipos de clip-path con los que contamos como circle, elipse, polygon, o tambien utilizando clip-path makers de internet como por ej: <a href="https://bennettfeely.com/clippy/" target="_blank">Clippy</a>
+    </p>
+    <br>
+    <h3>Formas e imagenes entre textos</h3>
+    <article class="shapes">
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno" class="float-left shape1">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo cumque unde temporibus! Recusandae expedita esse vitae hic sint officiis quam doloribus odit, quos ea! Nostrum sit aspernatur dolores molestiae culpa.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, consectetur. Perspiciatis dolores nisi magni rerum voluptate atque quae fuga autem quas ab nesciunt, eveniet adipisci sit sapiente velit ratione obcaecati.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia dolor, doloribus pariatur eaque odit molestias non nam consectetur harum mollitia voluptate. Delectus unde labore commodi asperiores quisquam ipsam, facilis deleniti.</p>
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno" class="float-right shape2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo excepturi aspernatur quibusdam quasi vero voluptate laudantium numquam dicta eveniet voluptatem, ad nihil, minus delectus fugit modi provident, libero id tenetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum laborum earum nihil odio illo labore doloribus hic! Illum, ad obcaecati consectetur fugit reiciendis facere, exercitationem quae, accusantium saepe minus voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae omnis, voluptates tempore blanditiis dolorum nam qui aliquam inventore! Voluptatum necessitatibus excepturi non, libero doloremque voluptas esse repudiandae eveniet quod harum?</p>
+        <img src="https://www.meteorologiaenred.com/wp-content/uploads/2018/08/Saturno-planeta.jpg" alt="Saturno" class="float-left shape3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores hic, molestias soluta perspiciatis fugiat eius suscipit laborum itaque tempora. Architecto nobis cum fuga eum commodi. Consequatur explicabo similique praesentium quos!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi facilis enim delectus reprehenderit eaque! Consequatur corporis, eius, dolor ut est ab saepe sed distinctio vel provident modi perspiciatis esse. Aperiam!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro quisquam omnis eius tempore. Voluptatem aperiam molestias, eaque facere debitis et rem cumque placeat doloremque eius expedita sed hic dolor natus.</p>
+    </article>
+    <p>
+        Como podemos ver, utilizando shape podemos darle diferentes formas al margen que separa nuestras imagenes del texto, haciando que puedan adaptarse a estas imagenes o a la forma que querramos darle(como por ej, utilizando poligonos o formas que disenemos en Clippy) para que nuestro diseno sea mas responsive.
+    </p>
+
+
+    <br>
+    <br>
+    <br>
+    
+</body>
+</html>

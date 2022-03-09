@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll snap type</title>
+    <link rel="stylesheet" href="Scroll-snapp-type.css">
+</head>
+<body>
+
+    <main class="slides">
+        <section class="slide">
+            <article class="slide-content">
+                <h1 class="gradient-text">Ajuste del scroll <small>(Slides)</small></h1>
+                <!--Lo que vamos a lograr con el efecto del scroll snap será que nuestra web se vea como si fueran diapositivas, para lograr esto debemos tener todo el contenido que querramos con este efecto dentro de un mismo contenedor, en este caso es el <'main>. <br>
+                Una vez tengamos eso, debemos definir la altura de nuestras etiquetas, para este ej utilizamos un section y este contiene un article el cual tiene el contenido.
+                A nuestro contenedor principal, el main, debemos darle la propiedad overflow-y= scroll(ya que en este ej vamos a movernos en el eje y) y luego utilizaremos la propiedad <b>Scroll-snap-type</b>. <br>
+                Esta propiedad recibe 2 valores, el primer valor decide que eje quieres controlar. Esto puede ser: el valor de x, el valor de y, el valor de inline(y), el valor de block(x) y el valor de both(tanto x como y), y el segundo valor indicaremos si queremos el valor mandatory(al hacer scroll directamente pasa a la siguiente diapositiva) y el valor proximity(debemos acercarnos mas a esa diapositiva para que haga el cambio). <br>
+                Una vez tengamos este, a la etiqueta con el contenido de la diapositiva debemos colocarle la propiedad <b>Scroll-snap-aling</b> para culminar con lo necesario para lograr este efecto. <br>
+                Tambien vamos a hacer el efecto pero en eje x. 
+                En el caso de x, necesitamos 2 contenedors, el primero es donde vamos a contener al segundo, el cual seria el principal. 
+                En nuestro ej de x, section es el primer contenedor y div el contenedor principal. -->
+                <section class="carousel">
+                    <div class="carousel-container">
+                        <article class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Slide 1</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Slide 2</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Slide 3</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Slide 4</h3>
+                            </div>
+                        </article>
+                        <article class="carousel-slide">
+                            <div class="carousel-content">
+                                <h3>Slide 5</h3>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </article>
+        <section class="slide">
+            <article class="slide-content">
+                <h2 class="gradient-text">Slide 1</h2>
+                <p class="gradient-text">
+                    Para lograr el degradado de color en el texto, debemos utilizar las propiedades background-image, esta puede ser linear o cualquier otra opcion, seguida de background-clip. Esta segunda propiedad debe ir acompañada de los prefijos de los navegadores(ver Resumen CSS) ya que todavia no es una propiedad totalmente desarrollada, por lo cual colocamos estos prefijos(ms, moz y webkit) seguidos del valor 'text'. Y tambien vamos a utilizar la propiedad text-fill-color con el valor transparent. Este ultimo, al igual que el anterior, tambien debe ir acompañado de los prefijos de los navegadores.
+                </p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-content">
+                <h2 class="gradient-text">Slide 2</h2>
+                <p class="gradient-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus unde vel, numquam omnis fugiat accusantium nisi recusandae natus quas, ducimus voluptatum maiores quis rem, distinctio sed quam? Eligendi, pariatur quasi?
+                </p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-content">
+                <h2 class="gradient-text">Slide 3</h2>
+                <p class="gradient-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et, sunt! Voluptates temporibus sapiente sequi eaque sit quis blanditiis natus quae inventore beatae, itaque repellendus quia aperiam et veritatis voluptas sint?
+                </p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-content">
+                <h2 class="gradient-text">Slide 4</h2>
+                <p class="gradient-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Accusamus, quam error aspernatur eveniet, alias perferendis nam est nemo sunt, doloribus impedit laboriosam reiciendis sit non! Quia nesciunt voluptatum id rem!
+                </p>
+            </article>
+        </section>
+        <section class="slide">
+            <article class="slide-content">
+                <h2 class="gradient-text">Slide 5</h2>
+                <p class="gradient-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat, quisquam neque, est pariatur aliquid quia dolor atque, fuga sed odit cumque? Ducimus, ipsam atque. Nisi obcaecati quibusdam voluptate ad amet?
+                </p>
+            </article>
+        </section>
+    </section>
+    </main>
+    
+</body>
+</html>

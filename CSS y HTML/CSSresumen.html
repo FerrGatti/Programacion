@@ -1,0 +1,774 @@
+ <!-- <!DOCTYPE html> -->
+ <html lang="es">
+ <head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CSS</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet"> <!-- De esta manera podemos utilizar los iconos de Google Fonts-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"> <!--De esta manera utilizamos los iconos de bootstrap-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> <!--Font awesome iconos-->
+    <link href="style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png">
+    <link rel="apple-touch-icon" href="https://cdn.pixabay.com/photo/2017/08/05/11/16/logo-2582747_960_720.png">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+ </head>
+    <body style="background-color: midnightblue;">
+        <header>
+        <h1 id="estilo">Resumen CSS</h1>
+            <details>
+                <summary style="color: yellow;">Menu de navegacion</summary>
+            <list>
+                <ul id="lista" class="lista1">
+                    <li class="lista"><a href="#estilo" id="ind" title="Estilo">Estilo</a></li>
+                    <li class="lista"><a href="#selectores" id="ind" title="Selectores">Selectores</a></li>
+                    <li class="lista"><a href="#fuentes" id="ind" title="Fuentes">Fuentes</a></li>
+                    <li class="lista"><a href="#bordes" id="ind" title="Bordes">Bordes</a></li>
+                    <li class="lista"><a href="#unidades" id="ind" title="Unidades">Unidades</a></li>
+                    <li class="lista"><a href="#colores" id="ind" title="Colores">Colores</a></li>
+                    <li class="lista"><a href="#variables" id="ind" title="Variables">Variables</a></li>
+                    <li class="lista"><a href="#valores" id="ind" title="Valores">Valores</a></li>
+                    <li class="lista"><a href="#pseudoclases" id="ind" title="Pseudoclases">Pseudoclases</a></li>
+                    <li class="lista"><a href="#pseudoelementos" id="ind" title="Pseudoelementos">Pseudoelementos</a></li>
+                    <li class="lista"><a href="#especificidad" id="ind" title="Especificidad">Especificidad</a></li>
+                    <li class="lista"><a href="#prefijos" id="ind" title="Prefijos">Prefijos</a></li>
+                    <li class="lista"><a href="#modelocaja" id="ind" title="Modelo de Caja">Modelo de Caja</a></li>
+                    <li class="lista"><a href="#colores" id="ind" title="Colores">Colores</a></li>
+                    <li class="lista"><a href="#unidades-de-medida" id="ind" title="Unidades de Medida">Unidades de Medida</a></li>
+                    <li class="lista"><a href="#variables-funciones" id="ind" title="Variables y funciones">Variables y Funciones</a></li>
+                    <li class="lista"><a href="#estilo-de-fuentes" id="ind" title="Estilo de fuentes">Estilo de fuentes</a></li>
+                    <li class="lista"><a href="#estilo-texto" id="ind" title="Estilo de texto">Estilo de texto</a></li>
+                    <li class="lista"><a href="#bordes-outlines" id="ind" title="Bordes y outlines">Borders y outlines</a></li>
+                    <li class="lista"><a href="#fondos" id="ind" title="Fondos CSS">Fondos CSS</a></li>
+                    <li class="lista"><a href="#estilo-lista" id="ind" title="Estilo de listas">Estilo de listas CSS</a></li>
+                    <li class="lista"><a href="#tablas-css" id="ind" title="Estilo de tablas">Estilo de Tablas CSS</a></li>
+                    <li class="lista"><a href="#formularios-css" id="ind" title="Estilo de formularios">Estilo de Formularios CSS</a></li>
+
+
+
+                </ul>
+            </list>
+        </details>
+        </header></br></br></br>
+        <details style="color: yellow;">
+            <summary>Paginas de referencia</summary>
+            <ul class="pseudoul">
+                <li class="pseudolist"><a href="https://cssrefecence.io" target="_blank">CSS Reference</a></li>
+                <li class="pseudolist"><a href="https://codeguide.co" target="_blank">CODE GUIDE</a></li>
+                <li class="pseudolist"><a href="https://developer.mozilla.org" target="_blank">MOZILLA DEVELOPER</a></li>
+                <li class="pseudolist"><a href="https://getbootstrap.com" target="_blank">BOOTSTRAP</a></li>
+                <li class="pseudolist"><a href="http://192.168.0.11:5500/CSS%20y%20HTML/ResumenHTML.html" target="_blank">Resumen HTML</a></li>
+            </ul>
+        </details>
+        <h2>Estilo en linea de codigo</h2>
+        <p style="color:white; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
+            Una de las formas de poder aplicar estilos a nuestra pagina es hacerlo directamente desde la linea de codigo. Este estilo debemos aplicarlo en la etiqueta de apertura a la cual lo aplicaremos en forma de atributo colocando 'style'. Dentro de las diferentes modificaciones que podemos hacer estan el color, la fuente, el tamano, la ubicacion en la pagina, etc.
+        </p>
+        </br>
+        <hr>
+        <h2>Estilo en head</h2>
+        <p>
+            Otra de las maneras que tenemos de aplicar estilos a nuestra pagina es a travez de la etiqueta <'style'> colocada dentro de head. Dentro de esta etiqueta colocaremos la etiqueta, nombre, id, tipo o class que buscamos darle estilo y entre {} iremos modificando el color, la fuente, el tamano de la fuente, etc.</br>
+        </p>
+            Por ej:</br></br> <p id="codigo" style="color: red;">h1{</br>
+                color: red;</br>
+                font: arial;</br>
+                font-size: 5px;</br>
+            }
+            </p>
+            </br> </br>
+            <p>De esta manera, le aplicamos estilo al texto dentro de la etiqueta h1.</br>
+            A diferencia del aplicado en linea, cuando utilizamos el style en head, este estilo se aplica a todos los textos que compartan etiqueta, por ej, si tenemos mas de un header 1, el estilo se aplicara a todos y cada uno de ellos.
+            </p>
+            <hr>
+            </br>
+            <h2>Creando un archivo css</h2>
+            <p>
+            Otra de las maneras de aplicar estilo a una pagina web es creando un archivo .css en el cual, de la misma manera que aplicando stilos dentro de head, llamaremos a cada etiqueta, nombre, id, type, etc, de manera individual y mediante {} aplicaremos cambios de color, fuente, etc.</br>
+            Para utilizar este archivo css, en la parte de head vamos a utilizar una nueva etiqueta llamada <'link'> seguida de un href en el cual colocaremos la direccion en nuestra pc donde se encuentre el archivo css a utilizar. Por ej: href="../CSS y HTML/style.css" rel="stylesheet"</br>
+            Para evitar que todos los estilos se apliquen a la etiqueta a la cual llamamos, como por ejemplo h1, debemos aplicar estos estilos utilizando el nombre o el class de la etiqueta, el cual logra que estos cambios se apliquen especificamente a estos.
+            </p>
+            </br>
+            <hr>
+            <h2 id="selectores">Selectores CSS</h2>
+                <img src="https://mdn.mozillademos.org/files/11925/csspartes.png" class="imagen-selectores" alt="Estructura selectores">
+                <p>
+                Los selectores son la forma en la cual nosotros seleccionamos el tipo de elemento a la cual se le va a aplicar el estilo indicado en nuestro archivo css.</br>
+                Como ya indicamos ateriormente, contamos con varios selectores basicos.</p></br>
+                <nav class="selectores">           
+                <h3 id="selectores">Selector de tipo</h3>
+                <p>
+                    Selecciona a los elementos por su tag name.</br>
+                    Por ej 'h1' selecciona a todos los elementos <'h1'>
+                </p></br>
+                <h3 id="selectores">Selector de clase</h3>
+                <p>
+                    El selector de clase llama a los elementos por su class name y se indica de la siguiente manera: '.texto'. En este caso, llamaria a todos los elementos con el class name 'texto'.
+                </p></br>
+                <h3 id="selectores">Selector de ID</h3>
+                <p>
+                    Selecciona al elemento basandose en su valor de atributo ID. Se indica de la siguiente manera: #nombre. Se aplicaria a todos los elementos con el valor de ID 'nombre'.
+                </p></br>
+                <h3 id="selectores">Selector universal</h3>
+                <p>
+                    Selecciona a todos los elementos. Opcionalmente puede estar restringido a un espacio de nombre especifico o a todos los espacios de nombres.</br>
+                    Se aplica de la siguiente manera: *. Se aplicara a todos los elementos del documento.
+                </p></br>
+                <h3 id="selectores">Selector de atributo</h3>
+                <p>
+                    Selecciona a los elementos basandose en el valor de un determinado atributo.</br>
+                    Ej: img[alt] Se aplicara a todas las imagenes que contengan el atributo 'alt'</br>
+                    Ej: [type="radio"] De esta manera seleccionamos a todos los elementos de tipo radio.
+                </p></br>
+                <h3 id="selectores">Selector de hijos directos</h3>
+                <p>
+                    Entre las distintas formas que tenemos de llamar a un elemento para darle estilo tenemos a estos 3 selectores, los cuales primero toman la class del elemento principal y llaman a los hijos de este. <br>
+                    Para ser mas claro, vamos a aplicar un ej:</p>
+                    <code style="color: yellow;">
+                        <pre>
+                             HTML
+                            <'ul class="hijos-directos">
+                                <'li>Ejemplo</'li>
+                            <'/ul>
+
+                            CSS
+                        hijos-directos > li{
+                            background-color: red;
+                        }
+                        </pre>
+                    </code>
+                    <br>
+                <p>
+                    De esta manera, el color de fondo se aplicaria al elemento li, el cual es hijo directo del elemento con la class hijos-directos.
+                </p>
+            </nav>
+            <hr>
+            <h2 id="fuentes">Fuentes</h2>
+            <p>
+                Las fuentes son partes fundamentales de nuestro estilo de pagina, y la forma de aplicarla es mediante font-famyly. Tenemos varios tipos de familias de fuentes para seleccionar. Se pueden agregar diferentes tipos de fuentes por si la primer seleccion falla y estas se separan con una coma. Ej:</br>
+                font-family: Verdana, 'Times New Roman', Gotic.
+            </p>
+            </br>
+            <hr>
+            <h2>Google Fonts</h2>
+            <p>
+                Google nos ofrece una libreria con diferentes tipos de fuentes las cuales podemos descargar o utilizar de manera online mediante un <'link'>. </br>
+                Primero debemos ingresar a <a href="https://fonts.google.com" target="_blank">Google Fonts</a> y elegir la fuente deseada.</br>
+                Una vez elegida la fuente, elegimos el estilo deseado y nos dara la opcion de copiar el link a agregar. Una vez copiado este link, lo agregamos al head de nuestro archivo html y luego copiamos el font family que nos ofrece google y lo agregamos a nuestro archivo css.
+            </p>
+            </br>
+            <hr>
+            <h2 id="bordes">Personalizar bordes de imagenes</h2>
+            <p>
+                Las imagenes que colocamos dentro de nuestra web pueden ser personalizadas, como por ej cambiar el ancho[widht], el alto[height], podemos agregarle bordes, entre otras cosas.</br>
+                El ultimo mencionado, el borde, tiene distintos tipos de personalizaciones. Primero comenzamos agregando el border-width, luego podemos agregarle un color, stilo, entre otras cosas. Un borde puede tener diferentes estilos en cada uno de sus lados y estos se agregan solamente poniendo el nombre del estilo separado por un espacio y se van a colocar en orden: arriba, derecha, abajo, izquierda.
+            </p>
+            <hr>
+            <h2>Imagenes redondeadas</h2>
+                <p>
+                Dentro de todas las personalizaciones que podemos agregarle a nuestras imagenes, una de ellas es la de agregarle bordes redondeados. Si aprovechamos esta funcion, podemos lograr que nuestra imagen tome forma redondeada dandole un valor de 50% a este border-radius.</br></br>
+            </p>
+                <hr>
+            <h2>Padding</h2>
+                <p>
+                    Padding es el espacio entre el contenido y el borde del elemento. El borde es escensial para conocer la distancia entre un elemento y otro.
+                    Podemos aplicar diferentes padding a cada lado del elemento con el atributo sumado a top, right, left or bottom. El tamano que apliquemos se aplicara al lado que elijamos.</br>
+                    Por ej: padding-top: 10px. (Se aplicaran 10pixeles a la parte superior).</br>
+                    Para poder aplicar padding a cada lado de nuestro elemento en una sola linea, podemos hacerlo todo dentro del elemento padding agregando los valores en sentido a las agujas del reloj, tomando top el primer valor, right el segundo, bottom el tercero y lefl el ultimo.</br>
+                    Por ej: padding: 10px 15px 5px 10px(se le aplicaran 10 pixeles a top, 15 pixeles a right, 5 pixeles a bottom y 10 pixeles a left).
+                </p>
+                <hr>
+            <h2>Margin</h2>
+                <p>
+                    Margin es la distancia entre el borde de un elemento con el borde de otro elemento.</br>
+                    Al igual que con padding, a margin se le pueden aplicar valores llamando a cada lado individualmente(top, right, left, bottom) o haciendolo en una sola linea(se aplica siguiendo las agujas del reloj).</br>
+                </p>
+                <hr>
+            <h2 id="unidades">Unidades Relativas y absolutas</h2>
+                <p>
+                    Todas las propiedades que se utilizan en CSS tienen un valor o un conjunto de valores que esa propiedad admite.</br>
+                    Las unidades absolutas no son relativas a nada mas que a ellas mismas, si aplicamos el valor de unidad absoluta a un elemento, este tendra el valor designado y no va a variar.</br>
+                    Un ej de unidades absoluta es px(pixel).</br>
+                    </br>
+                    Las unidades relativas dependen del elemento en el cual esten contenidas, como puede ser el tamano de la letra del elemento o a la ventana grafica.</br>
+                    De estas unidades vamos a prestar mayor atencion a vw y a em.</br>
+                    VW: vw es relativa al ancho de la ventana grafica, por lo que se ira modificando a la par que se modifique el ancho de la ventana del navegador.</br></br>
+                    EM: em es relativa al tamano de la letra que contiene el elemento padre, si por ej aumentamos el tamano de la letra, el elemento que contenga esta unidad tambien aumentara.</br>
+                    Mas informacion en <a href="https://developer.mozilla.org/es/docs/Learn/CSS/Building_blocks/Values_and_units" target="_blank">Developer Mozilla</a>
+
+                </p>
+                <hr>
+            <h2 id="colores">Colores hexadecimales</h2>
+            <p>
+                Un codigo hexadecimal es un codigo en base 16. En esta base tenemos numeros entre 0 y 9 y letras entre A y F entre 6 digitos.</br>
+                EJ: #000000#. Entre estas posibilidades, se le aplica en los primeros dos lugares cuanto de rojo, en los segundos dos, cuanto de verde y en los terceros dos cuanto de azul tendra el color(#00 00 00#).</br>
+                El mayor valor que se le puede agregar al color es F, ej : #FFFFFF#(blanco)</br>
+                Si queremos buscar el codigo de algun color especifico, lo podemos hacer colocando 'color picker' en nuestro navegador.</br>
+                En ciertos colores podemos abreviar nuestros codigos hexadecimales en 3 digitos.
+                Cuando los digitos de cada par estan repetidos, se pueden abreviar de la siguiente manera: #00ff00# ---> #0f0#.
+            </p>
+                <hr>
+            <h2 id="variables">Variables en CSS</h2>
+            <p>
+                Para crear una variable, primero debemos colocar dos guiones(--) seguido del nombre de la variable y del valor de esta.</br>
+                Una de las funcionalidades que podemos encontrarles es dandole un valor de color, por ej, --color: red. Luego cuando queramos asignar este color en alguna etiqueta, solamente colocamos el atributo, seguido de var y entre parentesis el nombre de la variable.</br>
+                Ej: h2{</br>
+                    background-color: var(--color)</br>
+                }</br>
+                En este caso, el color de fondo de h2 seria el valor de la variable previamente asignado. Esto nos es muy util ya que, al asignarle el valor de nuestra variable a diferentes elementos, si buscamos cambiar el valor de la variable solamente modificaremos su valor y este se aplicara a todos los elementos.
+            </p>
+            <hr>
+            <h2 id="valores">Valores de respaldo</h2>
+            <p>
+                Para prevenir errores en la asignacion de variables, en caso de que la variable no se consiga o no este correcta, el valor de respaldo nos ayudaria a cubrir la ausencia del valor principal. Para agregarlo, solamente colocamos una coma, seguido de un espacio y el valor de respaldo.</br>
+                Ej: h1{</br>
+                    background-color: var(--color, negro)</br>
+                }</br>
+            </p>
+            <hr>
+            <h2 id="pseudoclases">Pseudoclases</h2>
+            <p>
+                Una pseudoclase es una palabra clave que se anade a los selectores y que se especifica un estado especial del elemento seleccionado. <br>
+                Por Ej: :valid aplicara un estilo a un formulario con una informacion valid, como por ej un formulario de email con un email correcto, en caso de que el email este incorrecto este estilo no se le aplicara. <br>
+                Tenemos muchas pseudoclases, las cuales podemos ver dentro de <a href="https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes" target="_blank" title="Mozilla developers" style="text-decoration: none; color: yellow;">este link</a>.
+                Para aplicar estilo utilizando la psuedoclase hay que hacerlo de la siguiente manera: <br>
+                </p>
+                <code style="color: yellow;">
+                    <pre>
+                        .nombre-de-la-clase *:valid{
+                            border-color: red;
+                        }
+                    </pre>
+                </code>
+            <p>
+                Vamos a aplicar un ej practico agregando formularios y dandole estilo a estos.
+            </p>
+            <form class="pseudoclases">
+                <input type="text" name="Nombre" placeholder="Ingrese su nombre" required">
+                <input type="email" name="Email" placeholder="Ingrese su email" required">
+                <input type="submit">
+
+            </form>
+            </br>
+            <hr>
+            <h2>Pseudoclases por tipo y posicion</h2>
+            <p>
+                Al igual que las pseudoclases vistas anteriormente, tambien tenemos otra forma de darle estilo con CSS mediante otro tipo de llamado, en este caso, por tipo o posicion.
+                Vamos a aplicar algunos ej a continuacion: <br>
+            </p>
+            <article class="articulo-pseudoclases">
+                <ol>
+                    <li>January</li>
+                    <li>February</li>
+                    <li>March</li>
+                    <li>April</li>
+                    <li>May</li>
+                    <li>June</li>
+                    <li>July</li>
+                    <li>August</li>
+                    <li>September</li>
+                    <li>October</li>
+                    <li>November</li>
+                    <li>Dicember</li>
+                </ol>
+                <br>
+                <nav>Esto es un nav</nav>
+                <p>Esto es un parrafo</p>
+                <section>Esto es un section</section>
+                <p>Esto es un parrafo</p>
+                <nav>Esto es un nav</nav>
+                <p>Esto es un parrafo</p>
+                <section>Esto es un section</section>
+                <p>Esto es un parrafo</p>
+            </article>
+            <hr>
+            <br>
+            <h2 id="pseudoelementos">Pseudoelementos</h2>
+            <p>
+                A diferencia de las pseudoclases, los pseudoelementos se diferencian por utilizar un par de puntos dobles(:) en lugar de solo 1.
+                Tambien, al igual que las pseudoclases, estos se anaden a los selectores, pero no describen un estado en especial(como veiamos anteriormente como por ej en valid, focus, etc), sino que permiten anadir estilos a una parte en concreto del documento. <br>
+                Por ej <b style="color: whitesmoke;">::firts-line</b> selecciona solo la primera linea del elemento especificado(para ver lista completa de pseudoelementos visitar Developer Mozilla). <br>
+                Aplicamos pseudoelemtos como ejemplo: <br>                
+            </p>
+            <p>
+                <i>Bandai Myth Cloth Ex</i><span class="saga-geminis">Saga de Geminis</span><span class="saga-precio">500</span>
+            </p>
+            <br>
+            <p><b>Placeholder</b></p>
+            <input class="pseudoinput" type="text" name="Nombre" placeholder="Ingresa tu nombre">
+            <br>
+            <hr>
+            <h2 id="especificidad">Especificidad</h2>
+            <p>
+                La especificidad es el peso que tiene un selector cuando hay conflicto de estilos. Se calcula de la siguiente manera: <br>
+                Etiquetas y pseudoelementos ------ 0,0,0,1 <br>
+                Clases, atributos y pseudoclases --0,0,1,0 <br>
+                Identificadores -------------------0,1,0,0 <br>
+                Estilos en linea ------------------1,0,0,0 <br>
+                !important ------------- Rompe la especificidad
+            </p>
+            <br>
+            <hr>
+            <h2 id="prefijos">Prefijos de los navegadores</h2>
+            <ul style="color: yellow;">
+                <li>Navegadores de microsoft <code><b> - ms -</b></code></li>
+                <li>Firefox <code><b>- moz -</code></b></li>
+                <li>Todos los demas navegadores<code><b> - webkit -</b></code></li>
+            </ul>
+            <br>
+            <hr>
+            <h2 id="modelocaja">El modelo de caja</h2>
+            <p>Ver en este <a class="link2" href="box-model.html" target="_blank">link</a></p>
+            <br>
+            <hr>
+            <h2>Posicionamiento en HTML</h2>
+            <p>
+                Ver en este <a class="link2" href="posicionamiento.html" target="_blank">link</a>
+            </p>
+            <hr>
+            <br>
+            <h2 id="colores">Colores en CSS</h2>
+            <p>
+                Sistema hexadecimal: 0123456789ABCDEF <br>
+                El sistema hexadecimal cuenta con 6 digitos, los cuales son combinaciones de las letras y los numeros, y representan cada dos digitos a los colores rojo, verde y azul respectivamente. <br>
+                Ej: #FF6600 <br> <br>
+                Colores RGB: Este tiene mucha relacion con el sistema hexadecimal, estos se aplican entre () separados con comas y espacios, y van desde el 0 al 255 por cada color. <br>
+                Ej: rgb(255, 255, 255) -en este caso, seria color blanco-. <br> <br>
+                Sistema HSL(Hue Saturation Lightness - Tono Saturacio Luminocidad): Se considera como el sistema mas intuitivo. <br>
+                El primer valor es HUE(Circulo cromatico): <br>
+                0° -> red <br>
+                60° -> yellow <br>
+                120° -> green <br>
+                180° -> cyan <br>
+                240° -> blue <br>
+                300° -> magenta <br>
+                <img src="https://proyectodescartes.org/escenas-aux/CursoLibrosInteractivos2Edicion/Colores_CSS/imagenes/circulo.jpg" style="height: 300px; width: 300px; position: relative; left: 30px; top: 15px; margin-bottom: 25px;" alt="Circulo cromatico">
+                <br>
+                El segundo valor es Saturation(intensidad de color): <br>
+                0% -> Escala de grises <br>
+                100% -> Color puro
+                <br>
+                El tercer valor es Lightness(Luminocidad de color): <br>
+                0% -> Negro <br>
+                100% -> Blanco
+            </p>
+            <p class="color-hsla">Probando color HSLA</p>
+            <hr>
+            <br>
+            <h2 id="unidades-de-medida">Unidades de Medida</h2>
+            <p>
+                1- Absolutas (Su valor no cambia, son unidades del mumdo real) <br>
+                - pc, cm, mm, in, Q <br>
+                - pt(1/72in) <br>
+                - px (1/96in) <br>
+                <br>
+                2- Relativas (Su valor es relativo a un contexto) <br>
+                - em, rem, ex, ch(al tamano de la fuente) <br>
+                - em: Basada en la anchura de la "m" de la fuente del elemento. <br>
+                - rem: Basada en la anchura de la "m" de la fuente del elemento raiz(html). <br>
+                - ex: Basada en la altura de la "x" de la fuente del elemento. <br>
+                - ch: Basada en la anchura del "0" de la fuente del elemento. <br>
+                <br>
+                % - Al tamano del contenedor. <br>
+                - vw, vh, vmin, vmax - al tamano del viewport. <br>
+                - vw: Ancho del viewport, va del 1 al 100. <br>
+                - vh: Alto del viewport, van de 1 a 100. <br>
+                - vmin: Entre vw y vh toma el que tenga menor valor. <br>
+                - vmax: Entre vw y vh toma el que tenga mayor valor. <br>
+                <br>
+                Conversiones entre unidades: <a href="http://pxtoem.com/" target="_blank">Pxtoem</a>
+            </p>
+            <h2 class="">Pixels</h2>
+            <div class="pixels">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint totam provident fugit iure delectus velit magni perferendis itaque, impedit nobis voluptas cum quae inventore architecto modi blanditiis. Eligendi, dicta quia!
+            </div>
+            <h2 class="">Em</h2>
+            <div class="ems">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptate deserunt sapiente inventore vero ea dolores earum consectetur nulla obcaecati debitis reprehenderit sed, provident labore! Quis officiis consequatur officia? Vitae, excepturi!
+                <section class="em-child">
+                    En este caso, como ya aprendimos anteriormente, los em se basan en la anchura de la "m" de la fuente del elemento, por lo cual, el tamano de los em en este elemento se basaran en el tamano de la fuente del elemento en el cual se encuentra, que en este momento es el div Em(24pixeles).
+                </section>
+            </div>
+            <br>
+            <h2>Rems</h2>
+            <div class="rems">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed illum dolor ducimus aliquam eius, iure recusandae modi minima quam reprehenderit nisi itaque similique, repellat reiciendis delectus laudantium sint praesentium laboriosam!
+                <section class="rem-child">
+                    Al diferencia de los em, los rem se basan en la anchura de la fuente del elemento raiz que es HTML, y salvo que especifiquemos otro tamano de fuente, este sera de 16px.
+                </section>
+            </div>
+            <h2>Exs</h2>
+            <div class="exs">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et vitae molestiae deserunt, esse labore animi laborum nam illum nemo hic aut neque odio facere perspiciatis consequuntur, quam blanditiis enim dolores.
+                <section class="ex-child">
+                    Los ex se basan en el tamano de la altura de la x del elemento raiz que es HTML.
+                </section>
+            </div>
+            <h2>CHs</h2>
+            <div class="chs">
+                1234567890
+            </div>
+            <div class="ch">
+                Los CHs se ajustan a la cantidad de caracteres que designemos.
+            </div>
+            <br>
+            <h2>Vmax y Vmin</h2>
+            <div class="vmax">
+                Caja Vmax <br>
+                Esta toma el mayor tamano entre height y width.
+            </div>
+            <br>
+            <div class="vmin">
+                Caja Vmin <br>
+                Esta toma el menor tamano entre heigth y width
+            </div>
+            <h2 id="variables-funciones">Variables y Funciones</h2>
+            <h3>Custon Properties (Variables CSS)</h3>
+            <article class="custom-props-1">
+                <section class="custom-props-2">
+                    <div class="custom-props-3">
+                        Las variables nos sirven para guardar valores que luego mediante esta variable podamos utilizar valor en alguno de nuestras etiquetas. Las variables se almacenan dentro de una etiqueta y pueden aplicarse para los hijos de estas etiquetas. <br>
+                        Para utilizar estas variables, primero debemos almacenarlas, y lo hacemos de la siguiente manera: <br>
+                        <code style="color: yellow;">
+                            <pre>
+                                h3{
+                                    --color-primario: rojo;
+                                }
+                            </pre>
+                        </code>
+                        <br>
+                        Es importante el uso de dos guiones antes del nombre de nuestra variable. <br>
+                        Para aplicar nuestra variable, lo tenemos que hacer llamando a la funcion <b>var()</b>, ej: <br>
+                        <code style="color: yellow;">
+                            <pre>
+                                h3{
+                                    color: var(--color-primario);
+                                }
+                            </pre>
+                        </code> <br>
+                        Si por algun motivo, el valor guardado en nuestra variable no puede llegar a utilizarse, se recomienda siempre contar con valores de respaldo, que se colocan dentro del parentesis de la propiedad, colocando una coma luego del nombre de nuestra variable, de la siguiente manera: <br>
+                        <code style="color: yellow;">
+                            <pre>
+                                h3{
+                                    color: var(--color-primario, red);
+                                }        
+                            </pre>
+                        </code> <br>
+                        Si queremos que la variable pueda aplicarse en todos los elementos de nuestro html tenemos dos formas de hacerlo. <br>
+                        La primera es creando estas variables dentro del elemento html. <br>
+                        La segunda, y mas recomendable, es hacerlo dentro de la pseudoclase/selector :root
+                    </div>
+                </section>
+            </article>
+            <h3>Funcion URL()</h3>
+            <p>
+                La funcion URL nos permite utilizar fuentes externas que se encuentren en linea, o otros archivos html/css que poseamos. <br>
+                Como por ej, utilizar imagenes sin necesidad de descargarlas y ponerlas como background.
+                <code style="color: yellow;">
+                    <pre>
+                        background: url(https://linkdeprueba.com)
+                    </pre>
+                </code>
+            </p>
+            <h3>Funcion calc()</h3>
+            <p>
+                Esta funcion nos sirve para realizar calculos aritmericos. Por ej, nosotros podemos definir variables de tamano previamente, y luego a estas sumarlas entre si para aplicarlas a una propiedad. Por ej: <br>
+            </p>
+                <code style="color: yellow;">
+                    <pre>
+                        h3{
+                            --padding-size: 3ch;
+                            --num-ch: 10ch;
+                            background-color: yellow;
+                            font-size: 2rem;
+                            padding: var(--padding-size);
+                            width: calc(var(--num-ch) + var(--padding-size)*2)
+                        }
+                    </pre>
+                </code>
+                <p>
+                    En ese caso, lo que hicimos fue definir variables para utilizar en padding, y luego dimos un numero(10) que en ese caso buscabamos usar como numero maximo de characteres. Al momento de dar el width, lo que queriamos era cubrir el total de los characteres y sumarle el padding tanto left como right a ese width, por lo cual el padding-size lo multiplicamos *2. Siempre debe haber espacios en blanco entre los var(operando) y el signo +(operador). <br>
+                    Esto nos sirve, por si se diera el caso de querer modificar la cantidad de ch tanto en num-ch como el padding-size, al modificar estos, se modificaria automaticamente el width. Ahora vamos con este ej pero ya aplicado.
+                </p>
+                <div class="ch-10">
+                    1234567890
+                </div>
+                <h3>Funcion min() & max()</h3>
+                <p>
+                    Con estas funciones, lo que hacemos es que la propiedad tome el valor del valor mas alto o el valor mas bajo, dependiendo cual utilicemos, de los valores que determinemos dentro de la funcion. Podemos utilizar distintas unidades de medida, y la funcion analizara cual es mayor o menor de ambas. <br>
+                    Tambien, si utilizamos por ej la medida vh/vw, podemos llegar a obtener resultados dinamicos, ya que vh/vw se modifican al agrandar o achicar la ventana de nuestro navegador, por lo cual al modificarse esa medida, la funcion podria pasara a tomar el otro valor que pusimos. Vamos a verlo con uno ejemplo: <br>
+                </p>
+                <div class="min-max">
+                    Aca estamos utilizando la funcion min() para el ancho y la funcion max() para el alto.
+                </div>
+                   <h3 class="clamp">Funcion clamp</h3>
+                   <p>
+                       La funcion clamp nos permite agregar 3 valores, los cuales seran minimo, ideal y maximo. <br>
+                       Esto nos permite tenes un resultado dinamico, el cual, por ej de ser agregado a un texto, este se ira modificando mediante vayamos modificando el tamano de nuestra ventana o nuestro archivo html. <br>
+                       Al ejemplo practico lo vamos a ver en el titulo de esta seccion.
+                   </p>
+                   <hr>
+                   <br>
+                   <h2 id="estilo-de-fuentes">Estilo de fuentes y textos</h2>
+                   <h3>Estilos de fuentes</h3>
+                   <p class="font">
+                       font-family: Es la familia tipografica<br>
+                       font-size: Es el tamano de la fuente<br>
+                       font-weight: Es el grosor de la fuente, el cual puede ser light, normal, hacerla negrita, etc.<br>
+                       font-style: Estilo de la fuente, el cual puede ser italica, normal, entre otras.<br>
+                       font-variant: Variante de la fuente. Tenemos normal, el cual deja el texto por defecto, o small-caps, el cual vuelve mayusculas todas las letras del texto.<br>
+                       line-height: Es el interlineado del texto<br>
+                   </p>
+                   <h3>Fuentes externas</h3>
+                   <p>
+                       Para poder usar fuentes que no tenemos en nuestro sistema y que hayamos descargado, podemos utilizar @font-face para crear una nueva familia de fuentes con la fuente descargada. La sintexis para hacer esto es:
+                       <code style="color: yellow;">
+                           <pre>
+                            @font-face{
+                                font-family: "Nombre que querramos poner"
+                                src: url("Ubicacion del archivo") format("woff") -woff significa Web Open Font Format-
+                            }
+                            h3{
+                                font-family: "Nombre que le hayamos puesto a la family font"
+                            }
+                           </pre>
+                       </code>
+                   </p>
+                   <h3>Font display</h3>
+                   <p>
+                       Auto - Nos permite que el navegador utilice el metodo predeterminado que suele ser block. <br>
+                       Block - Oculta brevemente el texto hasta que la fuente haya sido descargada por completo. <br>
+                       Swap - Indica al navegador que utilice la fuente alternativa para mostrar el texto hasta que la fuente personalizada se haya cargado por completo. <br>
+                       Fallback - Es una mezcla de auto y swap. <br>
+                       Opctional - Ocultara el texto, luego lo cargara con la fuente alternativa y finalmente aplicara la fuente personalizada. <br>
+                       Para cargar de manera mas rapida las fuentes que utilicemos de manera online, ademas de agregar el href en el head, tambien debemos agregar:
+                   </p>
+                    <code style="color: rgb(255, 255, 0);">
+                        <pre>
+                            <'link rel="preconnect" href="url de la fuente que vamos a usar">
+                            <'link rel="preconnect" href="url de la otra fuente que vamos a usar" crossorigin>
+                        </pre>
+                    </code>
+                    <h3 class="estilo-texto">Estilos de texto</h3>
+                    <p>
+                        text-align: alineacion del texto <br> <br>
+                        text-decoration: decoracion del texto, si queremos que no tenga o quitarle la que contiene utilizamos el none <br> <br>
+                        text-indent: sangria que le podemos agregar al texto. <br> <br>
+                        text-overflow: al igual que el display overflow, esta propiedad nos sirve para poder trabajar con todo el texto que sobrepase el espacio de la etiqueta que lo contiene. Para poder utilizarlo, necesitamos tener el overflow: hiden; y el white-space: nowrap; <br> <br>
+                        Para conocer mas sobre la propiedad white-space visitar <a href="https://cssreference.io/property/white-space/" style="color: yellow;" target="_blank">CSS Reference</a> <br> <br>
+                        <a href="https://cssreference.io/property/text-transform/" target="blank" style="color: yellow;">text-transform:</a> Diferentes tipos de transformaciones que podemos aplicar al texto, como colocar todas las primeras letras en mayuscula, entre otras. <br> <br>
+                        letter-spacing: espacio entre cada letra. <br><br>
+                        word-break: sirve para romper las palabras y asi que puedan entrar dentro de la etiqueta donde se encuentren. <br><br>
+                        Por ej, si lo estuviesemos utilizando en este mom <br>
+                        ento el efecto seria de esta manera. <br><br>
+                        word-space: Es similar a white-space, pero la gran diferencia es que al espacio lo agrega solo entre las palabras y no a los caracteres. <br> <br>
+                        writing-mode: se puede cambiar el alineado del texto, poniendo el mismo en vertical, de derecha a izquierda, entre otras opciones.
+                    </p>
+                    <h2 id="tipografias">Tipografia de iconos vectoriales</h2>
+                    <a class="vectorial-icon" href="https://fonts.google.com/icons" target="_blank"><h3>Google Fonts</h3></a>
+                    <p>
+                        Ademas de ofrecernos diferentes tipos de fuentes, las paginas como Google Fonts o Bootstrap tambien nos ofrecen iconos vectoriales. Y estos, casi al mismo estilo que las fuentes, se pueden aplicar de diferentes modos. <br>
+                        En este caso en particular, los aplicaremos copiando el codigo, agregandole la clase "material-icons" y ademas, agregando en link en el head de nuestro archivo HTML. <br>
+                        Ademas de esto, debemos colocar su codigo CSS en nuestro archivo, que sera el que le dara forma a los mismos. <br>
+                        En el caso de google fonts la forma de aplicar los iconos es mediante spans, los cuales dependiendo el contenido de estos variara el icono que aparezca.
+                    </p>
+                        <span class="material-icons material-icons-outlined">
+                            g_translate
+                        </span>
+                        <span class="material-icons material-icons-outlined">
+                            favorite
+                        </span>
+                        <span class="material-icons material-icons-outlined">
+                            face
+                        </span>    <br>
+                        <p>
+                            Como podemos ver, los iconos toman todos el mismo tamano y color que se les da en el codigo CSS, y cambian por el contenido del span, ya que todos cuentan con la misma etiqueta y clase.
+                        </p>
+                        <br>
+                       <a class="vectorial-icon" href="https://icons.getbootstrap.com/" target="_blank"><h3>BOOTSTRAP</h3></a>
+                       <p>
+                           Ademas de Google Fonts, tambien contamos con Bootstrap para poder utilizar iconos, y de la misma manera que el anterior ej, este se aplica colocando el link en el head de nuestro archivo HTML. <br>
+                           Luego copiamos el codigo a nuestro archivo HTML y la diferencia de Google, en bootstrap lo que se modifica es el nombre de la clase, y este no utiliza spans sino que utiliza <'i'> ademas de que no es necesario colocar un codigo CSS.
+                       </p>
+                       <i class="bi bi-alarm" style="color: white;"></i>
+                       <i class="bi bi-apple" style="color: white;"></i>
+                       <i class="bi bi-twitter" style="color: white;"></i>
+                       <i class="bi bi-instagram" style="color: white;"></i>
+                       <br>
+                       <a class="vectorial-icon"href="https://fontawesome.com/v5.15/icons?d=gallery&p=2" target="_blank"><h3>Font Awesome</h3> </a>
+                       <p>
+                           Otra de las web que podemos utilizar para iconos es Font Awesome, esta, al igual que Bootstrap, utiliza <'i'> con el nombre del icono en la clase, ademas de colocar su codigo link en nuestro head.
+                       </p>
+                       <i class="fab fa-facebook" style="color: white;"></i>
+                       <i class="fab fa-instagram" style="color: white;"></i>
+                       <i class="fab fa-twitter" style="color: white;"></i>
+                       <hr>
+                       <br>
+                       <h2 id="bordes-outlines">Bordes y outlines</h2>
+                       <h3>Border radius</h3>
+                       <div class="box border-radius1"></div>
+                       <div class="box border-radius2"></div>
+                       <h3>Outset</h3>
+                       <div class="box outline"></div>
+                       <hr>
+                       <br>
+                       <h2 id="fondos">Fondos en CSS</h2>
+                       <p>
+                           Backgroud-color: Define el color de fondo del elemento. <br>
+                           Background-image: Define la imagen de fondo del elemento. <br>
+                           Background-repeat: Define como se repite la imagen de fondo en el elemento. <br>
+                           Background-size: define el tamano de la omagen de fondo, primer valor x, segundo valor y. <br>
+                           -- cover: cambia el tamano de la imagen de fondo para asegurarse de que permanezca completamente visible. <br>
+                           -- contain: cambia el tamano de la imagen de fondo para asegurarse de que el elemento este completamente cubierto. <br>
+                           Background-position: <br>
+                           -- define la posicion de la imagen de fondo, primer valor x, segundo y, si no se especifica un segundo valor este sera center. <br>
+                           -- Aparte de valores numericos podemos indicar el posicionamiento con las palabras: center, top, left and right. <br>
+                           Background-clip: Define cuanto debe extenderse el fondo dentro del elemento. <br>
+                           Background-origin: Define el origen de la imagen de fondo. <br>
+                           Background-attachment: Define como se comportara la imagen de fondo al desplazarse por la pagina. <br>
+                        </p>
+                       <div class="box bg-cover"></div>
+                       <div class="box bg-contain"></div>
+                       <div class="box bg-repeat"></div>
+                       <div class="box bg-position"></div>
+                       <div class="box bg-clip"></div>
+                       <div class="box bg-origin"></div>
+                       <div class="box bg-attachment"></div> <br>
+                       <p>
+                           Tambien, podemos crear fondos con multiples imagenes, las cuales si son .png, podemos combinar para crear imagenes unicas. Para poder realizarlo es recomendable utilizar solamente el background e ir aplicando todo ahi seguido de comas para separa las imagenes.
+                       </p>                       
+                       <div class="box bg-multiple"></div>
+                       <hr>
+                       <br>
+                       <h2 id="imagenes-responsivas">Imagenes con tamanos especificos</h2>
+                       <p>
+                           Dentro de esta seccion podemos observar imagenes dentro de objetos con tamanos especificos, las cuales podemos aplicar por ej para crear cards. Dentro del archivo CSS podemos ver las diferentes propiedades que podemos utilizar, las cuales son bastante parecidas al tema anterior.
+                       </p>
+                       <article class="card">
+                           <img src="https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg" alt="aurora">
+                           <h3>Aurora Boreal</h3>
+                       </article>
+                       <hr>
+                       <br>
+                       <h2 id="estilo-lista">Estilo de listas</h2>
+                       <p>
+                           Dentro de las listas tenemos muchos tipos de formas y estilos para poder aplicarlos. Desde numeros naturales, hasta numeros romanos o griegos.
+                       </p>
+                       <ul class="list">
+                           <li>Verano</li>
+                           <li>Otoño</li>
+                           <li>Invierno</li>
+                           <li>Primavera</li>
+                       </ul> <br>
+                       <p>
+                           Tambien ademas de simbolos o numeros, podemos utilizar imagenes que serviran como elementos de lista. La mejor forma de utilizarlas es mediante el pseudoelemto before, y aplicando las propiedades de background como size, position, repeat, etc.
+                       </p>
+                       <br>
+                       <ul class="list2">
+                           <li>Verano</li>
+                           <li>Otoño</li>
+                           <li>Invierno</li>
+                           <li>Primavera</li>
+                       </ul>
+                       <p>
+                           Vamos a ver otros estilos de listas.
+                       </p> 
+                       <br>
+                       <ul class="list3">
+                        <li>Verano</li>
+                        <li>Otoño</li>
+                        <li>Invierno</li>
+                        <li>Primavera</li>
+                       </ul>
+                       <br>
+                       <ul class="list4">
+                           <li>Mu de Arues</li>
+                           <li>Aldebaran de Tauro</li>
+                           <li>Saga y Kanon de Geminis</li>
+                           <li>Mascara de muerte de Cancer</li>
+                           <li>Aioria de Leo</li>
+                           <li>Shaka de Virgo</li>
+                           <li>Dohko de Libra</li>
+                           <li>Milo de Escorpion</li>
+                           <li>Aioros de Sagitario</li>
+                           <li>Shura de Capricornio</li>
+                           <li>Camus de Acuario</li>
+                           <li>Afrodita de Piscis</li>
+                       </ul>
+                       <hr>
+                       <br>
+                       <h2 id="tablas-css">Tablas en CSS</h2>
+                       <table class="table">
+                           <tr>
+                               <th>A</th>
+                               <th>B</th>
+                               <th>C</th>
+                           </tr>
+                           <tr>
+                               <td>1</td>
+                               <td>2</td>
+                               <td>3</td>
+                           </tr>
+                           <tr>
+                               <td>4</td>
+                               <td>5</td>
+                               <td>6</td>
+                           </tr>
+                       </table>
+                       <hr>
+                       <br>
+                       <h2 id="formularios-css">Formularios en CSS</h2>
+                       <form class="contact-form" action="https://formsubmit.com/your@email.com" method="POST">
+
+                       <input type="text" placeholder="Inserte su nombre" required pattern="[a-zA-Z]+" title="Introduce solo letras"> <!--Con este pattern hacemos que solo se puedan utilizar letras en el input, con los {} vacios indicamos que pueden ser la cantidad de letras que desee el usuario, si ahi colocaramos un numero limitariamos el numero de letras-->
+
+                       <input type="mail" placeholder="Inserte su mail" required pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$" title="Ingresa un email valido"> <!--Con este pattern hacemos que se puedan utilizar todos los simbolos-->
+
+                       <textarea name="comentarios" cols="30" rows="10" placeholder="Escribenos tu comentario" required></textarea>
+
+                       <input type="submit">
+                        </form>
+                        <hr>
+                        <br>
+                        <h2>Efectos y movimientos</h2>
+                        Ver en <a href="efectos-movimientos.html" target="_blank">Efectos y movimientos</a>
+                        <hr>
+                        <br>
+                        <h2>Efectos de scroll</h2>
+                        <p>Ver en <a href="scroll-one-page.html">Efectos de scroll(<small>one page scroll</small>)</a></p>
+                        <p>Scroll snap type ----> <a href="">Snap type</a> </p>
+                        <br>
+                        <h2>Movimiento en CSS</h2>
+                        <p>Ver en <a href="movimiento.html"></a></p>
+
+
+
+
+
+
+                       <br>
+    </body>
+        
+
+            <br>
+            <footer>
+                <hr>
+                </br><p>Fernando Gatti</br>
+                    Email - Fernandogatti74@gmail.com</br>
+                    Rosario, Santa Fe, Argentina.</p>
+                    <a href="https://www.linkedin.com/in/fernando-jesús-gatti-3823a91b7/" target="_blank" title="Perfil de linkedin"><img src="https://scontent.fros8-1.fna.fbcdn.net/v/t1.6435-9/140200567_3701904069871206_3564430137094154532_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeFOcOq9V2DGlJ-SfRj331wZKa4FXw_q1aUprgVfD-rVpdr6gFD6c_zU9gBa2owLPTD3DI9HzvLarnCPhsE8lhMn&_nc_ohc=kKKazDEXoygAX8A2-ay&_nc_ht=scontent.fros8-1.fna&oh=00_AT9SLJv_BEfhYsowZ--vB2YhBz3Ud9sdS1QecVsczTLaIw&oe=620F9F82" class="perfil" alt="foto-de-perfil"></a>
+                </footer> 
+            
+ </html>

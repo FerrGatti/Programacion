@@ -1,0 +1,124 @@
+html{
+    width: 900px;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+}
+h1{
+    border-width: thick; /* thin - 1px, medium - 3px, thick - 5px */
+    border-color: rgb(131, 4, 4);
+    border-style: solid;
+    width: 400px;
+    height: 200px;
+    display: flexbox;
+    position:relative;
+    margin-left: 350px;
+    text-align:center;
+}
+.div-uno,
+.div-dos{
+    background-color: blueviolet;
+    border: medium solid black;
+    margin: 16px;
+    padding: 32px;
+    display: flexbox;
+}
+.link{
+    text-decoration: none;
+    color: blue;
+}
+.link *:hover{
+    color: red !important;
+}
+.link *:visited{
+    color: blue;
+}
+.link *:link{
+    text-decoration: none;
+}
+.caja-none,
+.caja-linea{
+    width: 400px;
+    height: 100px;
+    background-color: violet;
+    border:medium solid black;
+    display: block;
+}
+/* .caja-none{
+    display: none;
+} */
+.caja-hiden{
+    visibility: hidden;
+}
+.overflow{
+    width: 200px;
+    height: 100px;
+    background-color: blueviolet;
+    /* overflow:hidden; */
+    /* overflow: scroll; */
+    overflow: auto;
+}
+.box-sizing-content{
+    width: 500px;
+    height: 250px;
+    background-color: lightskyblue;
+    box-sizing: content-box;
+    border: medium solid black;
+    padding: 10px;
+}
+.box-sizing-border{
+    width: 500px;
+    height: 250px;
+    background-color: lightslategray;
+    box-sizing: border-box;
+    border: medium solid black;
+    padding: 10px;
+}
+.container-col-3{
+    background-color: red;
+    width: 600px;
+    height: 300px;
+    margin-top: 20px
+}
+.container-col-3 > *{
+    width: 200px;
+    border: thin solid black;
+    float: left;
+    box-sizing: border-box;
+    padding: 10px;
+}
+.float-left{
+    float: left;
+}
+.float-right{
+    float: right;
+}
+.clearfix{
+    clear: both;
+}
+.margin-top{
+    background-color: lightsteelblue;
+}
+.margin-top section{
+    margin-top: 16px;
+    margin-bottom: 16px;
+    border: thin solid black;
+}
+.horizontal section{
+    display: inline;
+    margin-right: 16px;
+    margin-left: 16px;
+    border: thin solid black;
+    background-color: aqua;
+}
+/* Centrado de cajas */
+.sitio-web{
+    border: thin solid black;
+    background-color: thistle;
+    width: 800px;
+    height: 1000px;
+    padding: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}

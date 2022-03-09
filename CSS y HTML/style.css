@@ -1,0 +1,560 @@
+:root{
+    --default-bg-color: yellow;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: url(https://p4.wallpaperbetter.com/wallpaper/173/954/480/shovel-knight-video-games-pixel-art-retro-games-8-bit-16-bit-wallpaper-preview.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin-left: 10px;
+/* Con background-size 100% generamos que nuestra imagen cubra el 100% de la pagina, luego con el background-repet no-repeat hacemos que la imagen sea completa y no se repita, y por ultimo con el background-attachment fixed hacemos que la imagen se mantenga firme en el fonde mientras hacemos scroll por la pagina. */
+
+}
+header{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    letter-spacing: 2px;
+    padding: 5px 20px;
+    text-decoration: none; 
+    /* colocando el valor none a text-decoration le quitamos el subrayado que venia en el texto. */
+}
+#estilo{
+    font-family: 'Press Start 2P', cursive;
+    color: red;
+    font-size: 15px;
+    font-weight: bold;
+}
+.lista1{
+    list-style: none;
+    /* display: flex; */
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.5px;
+    transition: 0.7s;
+    column-count: 6;
+    column-rule: thin solid yellow;
+/* A esta lista le aplicamos atributos para que deje su orden descendente y se coloquen los elemetos uno al lado del otro, con list-style none le quitamos los puntos a cada elemento y con letter-spacing le damos un espacio de 2 pixeles entre cada letra. */
+}
+#ind{
+    color: yellow;
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+}
+h2 {
+    color: coral;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: larger;
+}
+h3{
+    color: yellow;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+}
+.selectores {
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+#selectores {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: larger;
+    color: coral;
+}
+p{
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+    font-size: medium;
+}
+.imagen-selectores {
+    width: 400px;
+    height: 200px;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+}
+.perfil {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+    float: left;
+}
+#codigo{
+    width: 350px;
+    height: 150px;
+    border-width: 3px;
+    border-color: whitesmoke;
+    border-style: outset;
+    justify-content: space-around;
+    padding: 20px 10px;
+    background-color: black;
+    
+
+}
+/* Pseudoclases */
+.pseudoclases *:focus {
+    background-color: skyblue;
+}
+.pseudoclases *:valid {
+    border-color: green;
+}
+.pseudoclases *:invalid{
+    border-color: red;
+}
+.pseudoul{
+    list-style: none;
+}
+
+.pseudolist *:visited{
+    color: yellow;
+}
+.pseudolist *:link{
+    color: yellow;
+    text-decoration: none;
+}
+.pseudolist *:hover{
+    color: red;
+}
+.articulo-pseudoclases li:first-child{
+    color: red;
+}
+.articulo-pseudoclases li:nth-child(2n){ /* El n se utiliza como un 'en', por ej en este caso seria de 2 en 2, asi que le aplicara color a cada elemento de la lista saltando de 2 en 2*/
+    color: orange;
+}
+.articulo-pseudoclases li:nth-child(2n+1){ /*Al igual que en el ej anterior, en este caso tambien lo hacemos de 2 en 2, pero le sumamos 1, asi que una vez posicionado en cada salto, le sumara 1 y le dara color a ese elemento */ 
+    color: yellow;
+}
+.articulo-pseudoclases li:nth-child(even){ /* Aca aplicamos el estilo a todos los li dentro de la pseudoclase que sean pares */
+    background-color: red;
+}
+.articulo-pseudoclases li:nth-child(odd){ /* En este caso, aplicamos el estilo a todos los elementos li dentro de la pseudo clase impares */
+    background-color: orangered;
+}
+.articulo-pseudoclases p:first-of-type{ /* De esta manera, aplicamos estilo al primer elemento de su tipo, entre todos los que haya, de en este caso 'p' */
+    color: red;
+}
+.articulo-pseudoclases nav:first-of-type{
+    background-color: white;
+}
+.articulo-pseudoclases *{
+    background-color: pink;
+}
+/* Pseudoelementos */
+.saga-geminis::before{
+    content: "👯"
+}
+.saga-geminis::after{
+    content: "♊️"
+}
+.saga-precio::before{
+    content: "$";
+    font-weight: bold;
+}
+.saga-precio::after{
+    content: "U$D";
+    font-weight: bold;
+}
+*::selection{ /* *selector universal, selecciona todo el documento*/
+    color: yellow;
+    background-color: black;
+}
+.pseudoinput::placeholder{
+    color: red;
+    background-color: black;
+}
+.pseudoinput{
+    background-color: red;
+    color: black;
+}
+.lista *:hover{
+    color: red !important;
+}
+.link2{
+    list-style: none;
+    color: yellow;
+    text-decoration: none;
+}
+.link2 *:visited{
+    color: yellow;
+}
+.link2 *:hover{
+    color: red !important;
+}
+.color-hsla{
+    width: 200px;
+    height: 30px;
+    color: white;
+    background-color: hsla(30, 100%, 50%, 0.10);
+}
+/* Unidades de medidas */
+.pixels{
+    background-color: #ff9039;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    color: white;
+    border: 5px solid white;
+}
+.ems{
+    background-color: #bb4455;
+    color: white;
+    font-size: 24px;
+    border: 0.2em white solid;
+    padding: 1em;
+    width: 29em;
+    height: 9.5em;
+}
+.em-child{
+    background-color: #ee3241;
+    border: thick solid black;
+    font-size: 0.8em;
+    width: 35em;
+    height: 5em;
+}
+.rems{
+    background-color: #bb4455;
+    color: white;
+    font-size: 24px;
+    border: 0.2em white solid;
+    padding: 1em;
+    width: 29em;
+    height: 9.5em;
+}
+.rem-child{
+    background-color: #ee3241;
+    border: thick solid black;
+    font-size: 1.5rem;
+    width: 40rem;
+    height: 8rem;
+}
+.exs{
+    background-color: #bb4455;
+    color: white;
+    font-size: 24px;
+    border: 0.2ex white solid;
+    padding: 1ex;
+    width: 50ex;
+    height: 20ex;
+}
+.ex-child{
+    background-color: #ee3241;
+    border: thick solid black;
+    font-size: 1.5ex;
+    width: 40ex;
+    height: 8ex;
+}
+.chs{
+    background-color: aqua;
+    width: 10ch;
+}
+.ch{
+    background-color: red;
+    width: 51ch;
+}
+.vmax,
+.vmin{
+    background-color: rosybrown;
+    border: thick solid white;
+    width: 50vmax;
+    height: 50vmin;
+}
+/* Variables y funciones en CSS */
+.custom-props-1{ /*dentro de la clase creamos la variable y le damos el valor. A la variable la creamos con guiones y el nombre que le querramos dar */
+    --primary-color: grey; 
+    --font-size: 16px;
+    background-color: var(--primary-color); /* Para utilizar nuestra variable llamamos a la propiedad var() y dentro de sus parentesis ponemos el nombre de la variable que contenga el valor que querramos utilizar */
+}
+.custom-props-3{
+    font-size: var(--font-size);
+}
+.ch-10{
+    --padding-size: 2ch;
+    --num-ch: 10ch;
+    background-color: yellow;
+    font-size: 2rem;
+    padding: var(--padding-size);
+    width: calc(var(--num-ch) + var(--padding-size) * 2);
+}
+.min-max{
+    background-color: var(--default-bg-color);
+    width: min(200px, 20vw);
+    height: max(200px, 25vh);
+}
+.clamp{
+    background-color: var(--default-bg-color);
+    color: black;
+    font-size: clamp(2rem, 1rem + 3vw, 3rem);
+    width: min(800px, 50vw )
+}
+/* Estilo de la fuente */
+.font{
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    font-variant: small-caps;
+    line-height: 2;
+}
+/* Iconos vectoriales */
+.material-icons {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    color: whitesmoke;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+  .vectorial-icon *:visited{
+      color: yellow;
+  }
+  .vectorial-icon{
+      color: yellow;
+      text-decoration: none;
+  }
+  /* Borders y Outlines */
+  .box{
+      background-color: black;
+      border: thick solid yellow;
+      width: 400px;
+      height: 400px;
+      margin: 4rem auto;
+  }
+  .border-radius1{
+      border-top-right-radius: 4rem;
+      border-bottom-left-radius: 4rem;
+      border-radius: 0 4rem 0 4rem; /* Se puede aplicar de diferentes maneras, como en las primeras 2 lineas que especifica cada una en una linea diferente, o como en la tercera la cual indica todas las especificaciones en la misma linea, el resultado es el mismo. */
+
+  }
+  .border-radius2{
+      border-radius: 2rem 4rem / 2rem 8rem; /* De esta manera modificamos el radio, y en lugar de ser un circulo perfecto, el radio comienza a formarse a partir de una forma oblicua. Se pueden ingresar 2, 3 o hasta 4 valores por lado los cuales iran modificando nuestra box. */
+  }
+  .outline{
+      outline-width: 0.2rem;
+      outline-style: solid;
+      outline-color: red;
+      outline-offset: -1.5rem;
+  }
+
+  /* Fondos en CSS */
+  .box{
+      margin: 2rem auto;
+      width: 300px;
+      height: 300px;
+      border: thick dashed red;
+  }
+  .bg-cover{
+      background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+      background-size: cover;
+  }
+  .bg-contain{
+      background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+      background-size: contain;
+  }
+  .bg-repeat{
+      background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+      background-size: 100px;
+      background-repeat: repeat;
+  }
+  .bg-position{
+      background-color: skyblue;
+      background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+      background-size: 200px;
+      background-repeat: no-repeat;
+      background-position: center center; /* El primer valor aplica de manera horizontal y el segundo valor aplica de manera vertical. */
+  }
+  .bg-clip{
+    background-color: skyblue;
+    background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-clip: border-box; /* valor por defecto */
+    background-clip: content-box;
+    padding: 5px;
+  }
+  .bg-origin{
+    background-color: skyblue;
+    background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+    background-size: 300px;
+    background-repeat: no-repeat;
+    background-origin: content-box; /* valor por defecto */
+    /* background-origin: padding-box; /* el origen de la imagen lo pega al padding de la caja */
+    padding: 1rem;
+  }
+  .bg-attachment{
+    background-color: skyblue;
+    background-image: url(https://experienciajoven.com/wp-content/uploads/2020/02/D%C3%B3nde-ver-auroras-boreales.jpg);
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    background-size: cover;
+    background-attachment: fixed;
+  }
+  .bg-multiple{
+      width: 600px;
+      height: 650px;
+      background: url(https://cdn.pixabay.com/photo/2015/09/15/06/20/panorama-940490_960_720.png) no-repeat center bottom, url(https://png.pngtree.com/png-clipart/20201128/ourlarge/pngtree-starry-night-sky-png-image_2444911.jpg) no-repeat center top fixed, url(https://png.pngtree.com/png-clipart/20210104/ourlarge/pngtree-beautiful-nature-blue-sky-with-various-cloud-png-image_2696214.jpg)no-repeat center bottom ;
+  }
+
+/* Imagenes con tamanos especificos */
+  .card{
+      border: solid medium white;
+      width: 400px;
+      height: 400px;
+  }
+  .card img{
+      width: 100%;
+      height: 300px;
+      object-fit: fill; /* valor por defecto */
+      object-fit: cover;
+      /* object-fit: contain; */
+      /* object-fit: none; */
+      /* object-fit: scale-down; --Esta propiedad toma el valor de todos los object-fit que hayamos utilizado en el cual la imagen es mas chica */
+      object-position: left top;
+      object-position: right bottom;
+  }
+  .card h3{
+      text-align: center;
+  }
+
+  /* Estilo de listas */
+  .list{
+      color: yellow;
+      list-style: disc; /* Valor por defecto */
+      list-style-type: armenian;
+      list-style-type: circle;
+      list-style-type: lower-greek;
+      list-style-type:upper-roman;
+      list-style-type: square;
+      list-style-type: lower-alpha;
+      list-style-type: none;
+      list-style-image: url(http://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png); /* Al momento de utilizar imagenes como elemento de listas debemos asegurarnos que sea del tamano adecuado. De no serlo, esta forma no es la recomendable de hacerlo. */
+      list-style-image: none;
+      list-style-type: armenian;
+ }
+
+.list2{
+    color: yellow;
+    list-style-type: none;
+}
+  .list2 li::before{
+      content: "";
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      background-image: url(http://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png);
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .list3 li{
+      background-color: yellow;
+      list-style-position: outside; /* valor que viene por defecto */
+      list-style-position: inside;
+  }
+  .list4{
+      color: yellow;
+      list-style-type: none;
+      column-count: 4; /* Colum-count es para dividir de manera horizontal nuestra lista en columnas, el numero que agreguemos es la cantidad de columnas que queremos, y nuestra lista se dividira en ella */
+      column-gap: 1rem; /* Colum-gap es la distancia entre cada columna. */
+      column-width: 100px; /* esta propiedad es para darle el tamano minimo de anchura que queremos que tenga nuestra lista */
+      column-rule: thin solid white; /* esta propiedad cumple casi la misma funcion que el border, la diferencia es que esta aplica solo una linea separadora entre cada columna. */
+  }
+
+  /* Tablas */
+  .table{
+      color: yellow;
+      font-size: 3rem;
+      border-collapse: separate; /* Default */
+      border-collapse: collapse;
+      empty-cells: hide;
+      /*empty-cells: show;*/ /* Valor por defecto */
+  }
+  .table,
+  td,
+  th{
+      border: medium solid white;
+      border-spacing: 1rem;
+  }
+
+  /* Formularios en CSS */
+  .contact-form{
+      --form-text-color: #333;
+      --form-succes-color: #4caf50;
+      --form-error-color: #f44336;
+      --form-bg-color: #eee;
+      --form-border-color: #222;
+      --form-placeholder-color: #006999;
+      
+      background-color: var(--form-bg-color);
+      border: thin solid white;
+      margin-left: auto;
+      margin-right: auto;
+      width: 80%;
+      padding: 2rem;
+  }
+  .contact-form > * {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      border-radius: .25rem;
+      font-family: sans-serif;
+      color: var(--form-text-color);
+      caret-color: var(--form-placeholder-color); /* Esto sirve para cambiar el color de la linea del cursor dentro del input */
+  }
+
+  .contact-form > *::placeholder{
+    color:var(--form-placeholder-color);
+  }
+  .contact-form > *[required]:invalid{
+      border: thin solid var(--form-error-color);
+  }
+  .contact-form > *[required]:valid{
+      border: thin solid var(--form-succes-color);
+  }
+
+  .contact-form input[type="submit"]{
+      margin-bottom: 0;
+      width: 30%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: var(--form-placeholder-color);
+      font-weight: bold;
+      font-size: 1.25rem;
+      color: #fff;
+  }
+  .contact-form input[type="submit"]:hover{
+      cursor: pointer;
+      opacity: 70%;
+  }
+  
+  .contact-form textarea{
+      resize: none; /* de esta manera evitamos que se pueda modificar el tamano de nuestra text area */
+  }

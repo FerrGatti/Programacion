@@ -1,0 +1,519 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+.box{
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 200px;
+}
+.card{
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: 0 30%;
+}
+.transition .box{
+    margin-bottom: 2rem;
+    background-color:red;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 1s;
+    /* De esta manera podemos aplicar la transicion de una propiedad */
+    /* Si quisieramos aplicarle a mas propiedades, como por ej al borde, tanto como cambio de color como de forma, podemos utilizar la el valor all en la propiedad transition-property pero en este caso como buena practiva no hay que sobrecargarlo */
+    transition: all 1000ms ease 0.5s;
+}
+.transition .box:hover{
+    background-color: black;
+    border-radius: 1rem;
+    border: thick solid red;
+}
+.transition .card{
+    transition: opacity 1s ease-out,
+    border-color 2s ease-in,
+    filter 2s ease-in,
+    box-shadow 2s steps(6);
+}
+.transition .card:hover{
+    opacity: 0.75;
+    border-color: aqua;
+    filter: blur(.5);
+    box-shadow: 1rem 1rem 2rem 0.5rem #000;
+}
+.transition .card img{
+    transition: object-position 1s ease-in 2s;
+}
+.transition .card img:hover{
+    object-position: 100% 50%;
+}
+.transform .transform-2d img{
+    transition: transform 2s ease-in-out;
+}
+.transform .transform-2d img:hover{
+    transform: scalex(1.5);
+    transform: scaley(0.5);
+    transform: scale(-1, 0.5);
+    transform: translateY(2rem);
+    transform: translateX(2rem);
+    transform:skewX(20deg);
+    transform: skew(10deg, 20deg);
+    transform: rotateY(180deg);
+    transform: rotateX(180deg);
+    transform: matrix(1, 2, 2, 1, 20, 20);
+}
+.transform-3d{
+    perspective: 10rem; /* Activando la perspectiva para que funcionen las transformaciones 3D */
+}
+.transform-3d img{
+    transition: transform 2s ease-in-out;
+}
+.transform-3d img:hover{
+    transform: translateZ(4rem);
+    transform: translateZ(-4rem);
+    transform: translate3d(2rem, 50%, -3rem);
+    transform: scaleZ(1.5);
+    transform: scale3d(1.5, 1.5, 2); /* los valores en este caso son scaleX(), scaleY(), scaleZ() */
+    transform: rotateX(60deg);
+    transform: rotateY(60deg);
+    transform: rotate3d(2, 1, 1, 60deg); /* los valores son x, y, z y el grado de rotacion */
+}
+
+.transform-origin img{
+    transition: transform 2s ease-in-out;
+    perspective: 10rem;
+}
+.transform-origin img:hover{
+    transform-origin: 50% 50% 0; /* valores por defecto */
+    transform-origin: top left; /* Podemos usar palabras claves para definir el origen */
+    transform-origin: 50% 0 0;
+    transform: rotate3d(2, 1, 1, 30deg);
+    transform: rotate(360deg);
+
+}
+/* Flip Cards */
+.flip-card-1,
+.flip-card-2{
+    border: thick solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 400px;
+
+    position: relative;
+    cursor: pointer;
+    transition: 1s ease-in-out;
+    perspective: 10rem;
+    transform-style: flat; /* Valor por defecto */
+    transform-style: preserve-3d;
+}
+
+.flip-card-2{
+    transform-origin: center right;
+}
+
+.flip-card-1 img,
+.flip-card-2 img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position: 0 30%;
+}
+.flip-face{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: visible; /* Valor por defecto */
+    backface-visibility: hidden;
+}
+.flip-front{
+    transform: rotateY(0deg)
+}
+.flip-back{
+    transform: rotateY(180deg);
+}
+
+.flip-card-1:hover{
+    transform: rotateY(180deg);
+}
+
+.flip-card-2:hover{
+    transform: translateX(-100%) rotateY(-180deg) scale(1.1, 1.1);
+    box-shadow: 1rem 1rem 2rem 0.5rem #000;
+    background-color: rgb(243, 68, 29);
+}
+
+/* Animaciones */
+@keyframes myAwesomeAnimation{
+    from{
+        opacity: 0;
+        transform: translateX(0);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(70%);
+    }
+}
+.my-animation{
+    /* animation: name duration timing-function delay iteration-count direction fill-mode play-state; */
+    animation-name: myAwesomeAnimation;
+    animation-duration: 4s;
+    animation-delay: 0;
+    /* animation-iteration-count: infinite; */
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal; /* Valor por defecto */
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-fill-mode: none; /* Esta funcion hace que la animacion tome los valores que tenia al comienzo o al final de la misma. None es su valor por defecto */
+    animation-fill-mode: backwards; /* Se queda con los valores del inicio de la animacion */
+    animation-fill-mode: forwards; /* Se queda con los valores que tiene al final de la animacion */
+    animation-fill-mode: both; /* Aplica al mismo tiempo backwards y fordwards */
+}
+@keyframes Charizard{
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 0.5;
+        transform: translateX(-100%);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(70%);
+    }
+}
+
+.my-animation2{
+    animation: Charizard 5s;
+    perspective: 10rem;
+    animation-fill-mode: forwards;
+}
+/* Ejemplos de animaciones */
+.motion-examples{
+    text-align: center;
+}
+
+@keyframes fadeIN {
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    30%,
+    80%{
+        opacity: 0.5;
+    }
+
+}
+.fade{
+    font-size: 10vw;
+}
+.fade-in{
+    animation: fadeIN 3s linear infinite alternate;
+}
+@keyframes fadeOUT {
+    0%,
+    100%{
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 1;
+    }
+    30%,
+    80%{
+        opacity: 0.5;
+    }
+}
+.fade-out{
+    animation: fadeOUT 3s linear infinite alternate;
+}
+@keyframes shake {
+    10%,
+    90%{
+        transform: translate(-1px, 0);
+    }
+    20%,
+    80%{
+        transform: translate(2px, 0);
+    }
+    30%,
+    50%,
+    70%{
+        transform: translate(-4px);
+    }
+    40%,
+    60%{
+        transform: translate(4px, 0);
+    }
+
+}
+.shake{
+    font-size: 10vw;
+    transform: translate(0,0);
+    display: inline-block; /* el Inline-block lo aplicamos para que nuestro objeto actue en bloque y solo haga efecto el hover cuando nos posicionemos sobre el y no en todo el bloque entero */
+}
+.shake:hover{
+    animation: shake 1s linear infinite alternate;
+    cursor: pointer;
+}
+@keyframes pulsacion {
+    0%{
+        transform: scale(1.1);
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.pulsacion{
+    font-size: 10vw;
+    animation: pulsacion 1s linear infinite;
+    display: inline-block;
+}
+@keyframes pulsacion-acelerada {
+    0%{
+        transform: scale(1.1);
+        opacity: .8;
+    }
+    50%{
+        transform: scale(.8);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+.pulsacion:hover{
+    animation: pulsacion-acelerada 0.5s linear infinite;
+    cursor: pointer;
+}
+/* Un loader */
+.spinner{
+    height: 10vw;
+    width: 10vw;;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1vw solid rgba(0, 0, 0, 0.205);
+    border-radius: 50%;
+    align-items: center;
+}
+@keyframes loader {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.spinner:hover{
+    animation: loader 1s ease-out infinite;
+    cursor: pointer;
+    border-top-color: #2600ff;
+}
+/* Animacion en botones con CSS */
+.btn{
+    position: relative;
+    border: none;
+    border-radius: .25rem;
+    padding: .2rem;
+    width: 15rem;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: .25rem .25rem .5rem .25rem rgba(0, 0, 0, 0.15);
+}
+.anim-bottom::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 0;
+    height: .25rem;
+    background-color: red;
+    transition: width .5s ease, left .5s ease, right .5s ease;
+}
+.anim-bottom:hover::after{
+    width: 100%;
+}
+.to-left::after{
+    left: 0;
+}
+.to-right::after{
+    right: 0;
+}
+.to-center::after{
+    left: 50%;
+}
+.to-center:hover::after{
+    left: 0;
+}
+.anim-bg-gradient{
+    background-image: linear-gradient(to right, red, orange, rgb(255, 247, 9), rgb(226, 0, 226));
+    background-size: 300% 100%;
+    transition: background-position .5s linear;
+}
+.anim-bg-gradient:hover{
+    background-position: 100% 0%;
+}
+/* Menu de pestañas animado */
+.tabs-menu{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ddd;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 70%;
+    height: 3rem;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.tabs-menu input[type="radio"]{
+    display: none;
+}
+.tabs-menu label{
+    width:calc(100% / 4 - .5rem) ; /* De esta manera, con la funcion calc, al tamaño del labor lo dividimos entre 4 que son los elementos para que se aplique en partes iguales, sumado a esto, le restamos el padding que agregamos */
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    cursor: pointer;
+}
+.tabs-menu label:hover{
+    color: #fff;
+}
+.tabs-menu input[type="radio"]:checked+label{
+    color: white;
+}
+.tabs-bg-hover{
+    position: absolute;
+    width: calc(100% /4 - .5rem);
+    height: 2rem;
+    border-radius: .5rem;
+    background-image: linear-gradient(90deg, #d00, yellow);
+    transition: transform 0.3s ease-in-out, background-image 1s linear;
+}
+#tab-1:checked ~ .tabs-bg-hover{
+    transform: translateX(0);
+    background-image: linear-gradient(90deg, yellow, #d00);
+}
+#tab-2:checked ~ .tabs-bg-hover{ /* En este caso, mediante selectores hermanos lo que hacemos es que cuando checkeamos el id #tab-2 el div tab-bg-hover sufra la transformacion, todo mediante el simbolo ~ el cual sirve para aplicar a cualquier hermano, a diferencia del simbolo mas que sirve para los hermanos adyacentes*/
+    transform: translateX(100%);
+}
+#tab-3:checked ~ .tabs-bg-hover{
+    transform: translateX(200%);
+    background-image: linear-gradient(90deg, yellow, #d00);
+}
+#tab-4:checked ~ .tabs-bg-hover{
+    transform: translateX(300%);
+}
+/* Menu Off canvas */
+.off-canvas-btn{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 999;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+    opacity: 0;
+}
+.off-canvas-burger{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    z-index: 998;
+    width: 3rem;
+    height: 0.6rem;
+    background-color: red;
+    border-radius: 0.3rem;
+    transform: rotate(0deg) translate(0, -1.2rem);
+    transform-origin: top left; 
+    transition: transform 0.5s ease, background-color 500ms ease;
+}
+.off-canvas-burger::before,
+.off-canvas-burger::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 0.6rem;
+    background-color: red;
+    border-radius: 0.3rem;
+    transition: transform 0.5s ease;
+}
+.off-canvas-burger::before{
+    transform: rotate(0deg) translate(0, -0.9rem)
+}
+.off-canvas-burger::after{
+    transform: rotate(0deg) translate(0, 0.3rem)
+}
+.off-canvas-btn:checked + .off-canvas-burger{
+    background-color: transparent;
+    transition: background-color 500ms ease;
+}
+.off-canvas-btn:checked + .off-canvas-burger::before{
+    transform: rotate(45deg) translate(0, 0);   
+}
+.off-canvas-btn:checked + .off-canvas-burger::after{
+    transform: rotate(-45deg) translate(0.4rem, -0.5rem);   
+}
+.off-canvas-menu{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 997;
+    background-color: #0008;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%, 0);
+    transition: transform 600ms ease;
+}
+.off-canvas-btn:checked ~ .off-canvas-menu{
+    transform: translate(0, 0);
+}
+.off-canvas-menu-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.off-canvas-link{
+    text-decoration: none;
+    color: white;
+    padding: 2rem;
+    border-bottom: thick solid #d00;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: background-color 300ms ease;
+}
+.off-canvas-link:hover{
+    background-color: #d005;
+}
+.off-canvas-link:first-child{
+    border-top: thick solid #d00;
+}

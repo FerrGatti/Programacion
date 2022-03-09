@@ -1,0 +1,64 @@
+body{
+    background-image: url(https://c.wallhere.com/photos/33/47/1920x1080_px_8_bit_Cave_Story_clouds_dragon_Moon_Pixel_Art_Pixels-684819.jpg!d);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.logo{
+    justify-content: space-around;
+    display: flex;
+    top: 0;
+    left: 0;
+    padding: 30px 20px;
+    letter-spacing: 2px;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 30px;
+    color: darkorange;
+
+}
+.lista{
+    list-style: none;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    letter-spacing: 2px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+#css{
+    color: gold;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    position: relative;
+    display: flexbox;
+}
+li{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+td{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+.menu{
+    margin: 0 5px;
+    text-decoration: none;
+    color: darkorchid;
+}
+h2{
+    color: coral;
+    font-family: 'Press Start 2P', cursive;
+}
+p{
+    color: gold;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+img{
+    border-width: 5px;
+    border-color: whitesmoke;
+    border-style: outset;
+}
+label{
+    color: coral;
+}

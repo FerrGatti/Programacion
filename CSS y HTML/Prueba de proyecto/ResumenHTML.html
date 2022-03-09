@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resumen</title>
+    <link href="style2.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1 class="logo">Resume of html</h1>
+
+        <nav>
+            <ul class="lista">
+                <li><a href="#Body" class="menu"> Body</a></li>
+                <li><a href="#Main" class="menu"> Main</a></li>
+                <li><a href="#Listas" class="menu"> Listas</a></li>
+                <li><a href="#Imagenes" class="menu"> Imagenes</a></li>
+                <li><a href="#Links" class="menu"> Links</a></li>
+                <li><a href="#Tablas" class="menu"> Tablas</a></li>
+                <li><a href="#Formularios" class="menu"> Formularios</a></li>
+                <li><a href="#Atributos" class="menu"> Atributos de texto</a></li>
+                <li><a href="#Linea" class="menu"> Linea divisoria</a></li>
+                <li><a href="#Elemento div" class="menu"> Elemento div</a></li>
+                <li><a href="#Pie de pagina" class="menu"> Pie de pagina</a></li>
+            </ul>
+        </br>
+        <ul id="css">
+            <li>Tambien visita<a href="../Prueba de proyecto/CSSresumen.html" target="_blank" id="css" title="Resumen css"> Resumen CSS</a></li>
+        </ul>
+        </nav>
+    </header>
+    <p>El elemento raiz de cada pagina web es la etiqueta <'html'>. Toda la informacion de nuestra pagina web estara dentro de esta etiqueta.
+    Luego de html, tenemos 2 elementos principales: HEAD y BODY.
+    Dentro de la etiqueta <strong>head</strong> va la parte no visible de nuestra pagina, son elementos importantes para la pagina pero no forman parte de la pagina visible. Aqui podemos colocar el link de style para darle forma con codigo css, podemos poner el titulo de la pagina el cual aparecera en el nombre de la ventana y podemos poner tambien el lenguaje que tiene nuestra pagina.</p>
+    <main>
+        <br/><br/>
+        <hr>
+        <h2 id="Body">Body</h2>
+        <p>Dentro del body es donde nosotros comenzamos a armar nuestra pagina, dentro de el tendremos nuestros encabezados, cuerpo de la pagina, menus, distintas vinetas donde volcaremos toda la informacion visible de la misma.
+        Si queremos agregar parrafos a nuestro body, lo hacemos con la etiqueta <'p'></p>
+        <br/><br/>
+        <hr>
+        <h2 id="Main">Elemento Main</h2>
+        <p>
+            El contenido principal de nuestra pagina se va a encontrar dentro de la etiqueta <'main'>. El area principal del contenido consiste del contenido que esta directamente relacionado, o se expande sobre el tema central de un documento o la funcionalidad central de una aplicacion.
+            No debe haber mas de un contenido main en un documento y este no debe ser descendiente de un elemento, como por ej de un article, aside, footer, header o nav.
+        </p>
+        <br/><br/>
+        <hr>        
+        <h2 id="Listas">Listas</h2>
+        <p>Dentro de los elementos que podemos colocar en el body de la pagina tenemos las listas. Las listas pueden ser ordenadas(ol) o desordenadas(ul). Para colocar una lista, primero debemos colocar la vineta <'list'> y dentro de ella al tipo de lista que queremos armar <'ol'> o <'ul'>. Dentro de estas vinetas colocaremos nuestros elementos de lista dentro de vinetas <'li'> de listas.</p>
+        <list>
+            <ol>
+                <li>Head</li>
+                <li>Body</li>
+                <li>Elementos del body</li>
+            </ol>
+        </list>
+        <br/><br/>
+        <hr>
+        <h2 id="Imagenes">Imagenes</h2>
+        <p>Otro de los elementoso que tenemos para nuestra pagina son las imagenes. Para colocar imagenes debemos utilizar la vineta <'img'> seguido de los siglas src="" en la cual colocaremos el link de la ubicacion dentro de nuestro ordenador de la imagen.
+        A la imagen le podemos dar altura con width y el ancho con height.</p>
+        <br/><br/>
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML/Element/nav" target="_blank"><img src="../CSS y HTML/Imagenes/table.png" alt="Tabla de documentos HTML"></a>
+        <br/><br/>
+        <hr>
+        <h2 id="Links">Links</h2>
+        <p>
+            Para agregar links a nuestra pagina web utilizamos la etiqueta <'a'> seguido de un href(que refiere a hyper reference) seguido de un signo ="" y el link en custion, comenzando por https. Entre medio de ambas etiquetas colocaremos algo que haga referencia al link como el nombre de la pagina, o cualquier cosa que nosotros decidamos, y al hacer click sobre este se los redirigira hacia la direccion del link.
+            Si dentro de esta etiqueta colocamos el atributo 'target'='blank' logramos que al presionar en el link este se abra en otra pestana y nuestra pagina principal se mantenga. Otro atributo para los links es rel="noopener noreferrer" el cual nos permite evitar ataques llamados tapnabbing<a href="http://www.youtube.com" target="_blank" rel="noopener noreferrer">Youtube</a>
+            Podemos crear tambien enlaces internos para navegar dentro de nuestra pagina. Para esto, a cada etiqueta hay que agregarle un ID por el cual navegaremos, una vez asignado el id, creamos la etiqueta <'a'> y en la href="#body" colocamos una almohadilla y el id que hayamos asignado a la etiqueta.
+            Tambien podemos convertir imagenes en links, para esto solamente debemos rodear la etiqueta de la imagen con una etiqueta de apertura de enlace(<'a'>) y una etiqueta de cierre(</'a'>)
+        </p>
+        <br/><br/>
+        <hr>
+        <h2 id="Tablas">Tablas</h2>
+        <p>Las tablas tienen estructuras que se dividen en cabeza de la tabla y cuerpo de la tabla. Dentro de la cabeza iran los 'Titulos' a los cuales describiremos dentro del cuerpo de la misma. Para colocar una tabla, en primer lugar debemos colocar la vineta <'table'>, una vez dentro de table colocaremos el <'thead'> que es para colocar los elementos de la cabeza de la tabla y cada elemento ira dentro de un <'tr'> <'td'>
+        Luego de colocar los elementos de la cabeza de nuestra tabla, colocaremos los elementos del cuerpo dentro de <'tbody'> que dentro tendra un <'tr'> y dentro de este estaran los elementos dentro de un <'td'></p>
+        <table>
+            <thead>
+                <tr>
+                    <td>Ocean</td>
+                    <td>Average Depth</td>
+                    <td>Maximun Depth</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pacific</td>
+                    <td>4280mt</td>
+                    <td>10911mt</td>
+                </tr>
+                <tr>
+                    <td>Atlantic</td>
+                    <td>3646mt</td>
+                    <td>8486mt</td>
+                </tr>
+            </tbody>
+        </table>
+        <hr>
+        <h2 id="Formularios">Formularios</h2>
+        <p>Los formularios son elementos muy importantes a la hora de crear un sitio web, ya que mediante ellos recopilamos informacion del usuario. Este elemento permite que el ususario ingrese diferentes tipos de informacion con diferentes tipos de entrada.
+        Para colocar un formulario utilizamos la vineta <'form'> seguido de una vineta <'input'>.
+        Para que estos datos que completamos en el formulario sean enviados a un servidor en el cual trabajemos debemos colocar dentro de la vineta de apertura <'form'> 'action=""' y dentro de las comillas colocar la direccion del archivo del servidor que recopilara estos datos. Como por el momento no trabajamos con un servidor lo completaremos con '/enviar-respuesta'
+        Si dentro de nuestro formulario queremos que sea requerida una respuesta si o si para poder ser enviado, utilizamos el atributo 'required' dentro de la etiqueta del input.
+        Tenemos diferentes tipos de formularios y a continuacion tenemos algunos ejemplos de estos.
+        Dentro de estos formularios tenemos diferentes atributos que podemos colocar, como por ej placeholder el cual coloca un texto dentro del formulario en el cual indicaremos que debe colocar el usuario. 
+        En el nombre de cada formulario colocaremos un nombre por el cual querramos llamarlo al momento de editarlo mediante css o usarlo mediante un automatizador.</p>
+        <form action="/enviar-respuesta">
+            <!--Botones de texto-->
+            <input type="text" placeholder="Firts Name" name="Firts" href="0" required>
+            <input type="password" placeholder="Password" name="Password" required>
+            <div>
+                <p>Favorite color:</p>
+                <!--Botones de radio-->
+                <label><input name="color" type="radio" value="blue" required>Blue</label><!--Cuando a nuestro input le colcamos 'name' lo que hacemos es crear un grupo de formularios, para que nuestro navegador sepa que pertenecen al mismo grupo(si comparten el name) y solo nos permita seleccionar uno-->
+                <label><input name="color" type="radio" value="red" required checked>Red</label>
+                <label><input name="color" type="radio" value="green" required>Green</label>
+                <label><input name="color" type="radio" value="yellow" required>Yellow</label>
+            </br>
+
+            <!--Checkbox-->
+                <label for="checkbox1"><input name="checkbox" type="checkbox" id="checkbox1" checked>checkbox 1</label>
+                <label for="checkbox2"><input name="checkbox" type="checkbox" id="checkbox2">checkbox 2</label>
+        </br>
+            <!--Boton enviar-->
+                 <button type="submit">Enviar</button>
+
+            </div>
+        
+        </form>
+        <p>
+            La etiqueta <'label'> nos sirve para que, al momento de colocar un formulario tipo radio podamos seleccionar la opcion haciendo click en el nombre y no solo en el boton circular para seleccionar la opcion. Para esto, debemos rodear nuestro formulario con esta etiqueta tanto en apertura <> como en cierre</>.
+        </p>
+        <p>
+            <strong>ATRIBUTO CHECKED</strong></br>
+            El atributo checked nos permite colocar alguna de las casillas de nuestros botones radio figura marcada por defecto al ingresar en la pagina. Este atributo se coloca dentro del elemento input.</br>
+        </br>
+            <strong>ATRIBUTO VALUE</strong></br> 
+            Este atributo nos permite enviar al servidor el valor del elemento seleccionado dentro de nuestro formulario.
+            Este atributo se coloca dentro del elemento input.
+        </p>
+        <br/><br/>
+        <hr>
+        <h2 id="Atributos">Atributos de texto</h2>
+            <p>Para la personalizacion de nuestros textos, tenemos diferentes atributos que podemos colocar para darle una personalizacion diferente. La etiqueta <'strong'> nos sirve para colocar el texto en <strong>negrita</strong>. Si lo que queremos es que nuestro texto este en <em>cursiva</em> utilizamos la etiqueta <'em'>
+            Para <s>tachar</s> texto utilizamos <'s'>.</p>
+            </br></br>
+            <hr>
+            <h2 id="Linea">Linea horizontal en nuestra pagina web</h2>
+            <p>
+                Si queremos colocar una linea horizontal para separar cosas dentro de nuestra pagina web utilizamos la etiqueta <'hr'> lo cual colocara una linea separadora en el lugar donde lo colquemos.
+            </p>
+            <hr>
+        <h2 id="Elemento div">Elemento div</h2>
+        <p>
+            El elemento div es uno de los elementos mas importantes dentro del desarrollo web por su versatilidad.</br>
+            Es un contenedor personalizable mediante css.
+        </p>
+        <hr>
+        <h2 id="Pie de pagina">Pie de pagina</h2>
+        <p>
+            EL pie de pagina va colocado fuera de main, ya que no es parte de la pagina principal.</br>
+            La etiqueta para colocar el pie de pagina es <'footer'>.</br>
+            En el podemos colocar distintos contenidos, como texto con derecho de autor, etc.
+        </p>
+        <hr>
+
+        
+
+    </main>
+    <footer>
+        <p><small>Derechos de autor - <a href="https://www.linkedin.com/in/fernando-jesús-gatti-3823a91b7/" target="_blank">Fernando Gatti</a></small></p>
+    </footer>
+
+        
+    
+</body>
+</html>
