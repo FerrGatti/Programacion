@@ -55,7 +55,7 @@ main{
     width: 3rem;
     height: 0.6rem;
     background-color: black;
-    top: 1rem;
+    top: 1.5rem;
     left: .9rem;
     position: fixed;
     z-index: 998;
@@ -92,7 +92,7 @@ main{
 .menu-oculto{
     width: 30vw;
     height: 30vh;
-    background-color: yellow;
+    background-image: linear-gradient(to right, rgba(255, 14, 14, 0.576),  rgba(255, 139, 14, 0.576),  rgba(255, 199, 14, 0.576));
     border: thick solid black;
     transform: translate(-100%, 4rem);
     transition: transform 0.5s ease-in, box-shadow 0.5s ease-in;
@@ -108,6 +108,12 @@ main{
 }
 .menu-link:link{
     text-decoration: none;
+}
+.menu-link:visited{
+    color: black;
+}
+.menu-link:hover{
+    color: white;
 }
 .contenido-de-la-pagina{
     width: 70%;
