@@ -1,0 +1,222 @@
+html{
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+}
+
+*,*::after,
+*::before{
+    box-sizing: inherit;
+}
+body{
+    margin: 0;
+}
+.portada{
+    width: 100vw;
+    height: 30rem;
+    background-image: url(https://www.itl.cat/pngfile/big/295-2958925_fondos-de-pantalla-gamer-4k.jpg);
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.nav-bar{
+    width: 100%;
+    height: 5rem;
+    background-color: transparent;
+    background-image: linear-gradient(to right, transparent, transparent, rgba(255, 0, 0, 0.527), rgba(0, 0, 255, 0.514), rgba(238, 130, 238, 0.5));
+    background-size: 300% 100%;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    cursor: pointer;
+    transition: background-position 5s ease-in;
+}
+.nav-bar:hover{
+    background-position: 100% 0%;
+}
+.titulo{
+    justify-content: center;
+    text-align: center;
+    padding-top: 1.5rem;
+    color: white;
+}
+.menu-burger{
+    width: 3rem;
+    height: 3rem;
+    position: sticky;
+    top: 0rem;
+    left: .3rem;
+    position: absolute;
+    z-index: 999;
+    opacity: 0;
+    cursor: pointer;
+}
+/* Boton de menu */
+.off-canvas{
+    width: 3rem;
+    height: 0.6rem;
+    background-color: black;
+    top: 1.5rem;
+    left: .9rem;
+    position: fixed;
+    z-index: 998;
+    transition: transform 0.5s ease-in, background-color 0.5s ease-in;
+}
+.off-canvas::after,
+.off-canvas::before{
+    width: 3rem;
+    height: 0.6rem;
+    background-color: black;
+    content: "";
+    top: 1rem;
+    left: .9rem;
+    display: block;
+    transition: transform 0.5s ease-in, background-color 0.5s ease-in;
+}
+.off-canvas::after{
+    transform: rotate(0deg) translateY(-1.5rem);
+}
+.off-canvas::before{
+    transform: rotate(0deg) translateY(.9rem);
+}
+.menu-burger:checked + .off-canvas{
+    background-color: transparent;
+}
+.menu-burger:checked + .off-canvas::before{
+    transform: rotate(45deg);
+    background-color: white;
+}
+.menu-burger:checked + .off-canvas::after{
+    transform: rotate(-45deg) translate(0.5rem, -0.4rem);
+    background-color: white;
+}
+@keyframes fadeIN {
+    0%,
+    100%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 0;
+    }
+    30%,
+    80%{
+        opacity: 0.5;
+    }
+}
+.contenido-header{
+    font-size: 3rem;
+    padding-top: 7rem;
+    color: white;
+    animation: fadeIN 5s linear infinite alternate-reverse;
+}
+/* Parte media de la pagina */
+.seccion-info{
+    margin-top: 5rem;
+    padding-top: 2rem;  
+    width: 35rem;
+    height: 20rem;
+    overflow:visible;
+    /* justify-content: center; */
+    text-align: center;
+}
+.info-1{
+    cursor: pointer;
+    transition: transform 2s ease-in;
+}
+.info-2{
+    margin-top: 1rem;
+    justify-content: center;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1s ease-in, transform 2s ease-in, margin-left 2s ease-in;
+}
+.info-1:hover{
+    transform: scale(2);
+}
+.info-1:hover + .info-2{
+    opacity: 1;
+    transform: scale(1.1);
+    margin-left: 4rem;
+    justify-content: center;
+    text-align: center;
+}
+.info-perfil{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 5rem;
+    transition: opacity 2s ease-in, transform 2s ease-in, margin-left 2s ease-in;
+    opacity: 0;
+}
+.info-perfil > img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 5rem;
+}
+.info-1:hover ~ .info-perfil{
+    transform: scale(1.1);
+    opacity: 1;
+    margin-left: 2rem;
+}
+
+*::selection{
+    color: blue;
+    background-color: red;
+}
+.info-img{
+    position: absolute;
+    width: 30rem;
+    height: 20rem;
+    right: 5rem;
+    display:inline-block;
+    transition: transform 3s ease-in, box-shadow 3s ease-in;
+    cursor: pointer;
+}
+.info-img > img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+    object-position: 0 0;
+}
+.info-img > p{
+    font-size: 1.5rem;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 3s ease-in;
+}
+.info-img:hover{
+    transform: scale(1.1);
+    box-shadow: 1rem 0.5rem 2rem 0.5rem;
+}
+.info-img:hover > p{
+    opacity: 1;
+}
+.info-medio{
+    position: relative;
+    width: 60vw;
+    height: auto;
+}
+.info-3{
+    font-size: 3rem;
+    margin-top: 2rem;
+    position: absolute;
+}
+@keyframes Movimiento{
+    0%{
+        transform:translateY(2rem)
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 1;
+    }
+
+}
+.info-imagen{
+    position: absolute;
+    left: 100%;
+    animation: Movimiento 1s linear infinite alternate;
+}
