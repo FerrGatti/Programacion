@@ -1,0 +1,36 @@
+[class^="box"]{
+    margin: 3rem auto;
+    background-color: orangered;
+}
+.box{
+    width: 300px;
+    height: 300px;
+}
+.box-flexible{
+    width: 50%;
+    height: 20vh;
+}
+.box-flexible-2{
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+}
+/* La altura maxima del box flexible 2 entra en juego cuando este contiene un contenido, como en este caso parrafos, y al ser modificada su anchura el parrafo empieza a adaptarse hasta que este contenedor llega a la maxima altura establecida */
+.box-flexible-3{
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+    width: 300px;
+    height: 300px;
+}
+/* Cuando aplicamos max/min-width y max/min-height y luego queremos aplicar un height y width base, estos segundos por jerarquia superponen cuando utilizamos medidas absolutas, por lo cual debemos usar medidas porcentuales, entre ellas los % y los vh y vw */
+.box-flexible-4{
+    max-width: 960px;
+    min-width: 280px;
+    max-height: 480px;
+    min-height: 280px;
+    width: 50%;
+    height: 20vh;
+}
