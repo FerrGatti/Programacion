@@ -34,3 +34,9 @@
     width: 50%;
     height: 20vh;
 }
+/* Elementos flexibles */
+/* El primer metodo para poder hacer un elemento flexible es colocandole un max-widht 100% y un height auto */
+img{
+    max-width: 100%;
+    height: auto;
+}

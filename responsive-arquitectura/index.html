@@ -78,6 +78,30 @@
     </article>
     <hr>
     <article id="multimedia-flexible" class="full-screen">
+      <h2>Meta etiquetas de Responsive designe</h2>
+      <p>
+        Meta viewport: Nos sirve para layouts flexibles, ya que empatamos el ancho del layout con el dispositivo que usemos(buscar mas info). <br>
+        <code style="color: red;"><'meta name="viewport" content="widht=device-widht"></code>
+      </p> <br>
+      <p>
+        Para estar totalmente seguros de que el layout se va a ver como nosotros queremos, tambien podemos fijar el nivel del zoom de la siguiente manera: <br>
+        <code><'meta name="viewport" content="initial-scale=1.0"</code> por lo cual la meta etiqueta final nos quedaria de la siguiente manera: <br>
+        <code style="color: red;"><'meta name="viewport" content="width=device-width, initial-scale=1.0"></code>
+      </p> <br>
+      <h2>Media querys</h2>
+      <p>
+        Podemos establecer ciertas reglas de estilo que van a sobreescribir a las originales cuando se cumplan ciertas condiciones que nosotros indiquemos, como podria ser un rango de ancho de pantalla en pixeles, o la orientacion del dispositivo donde se abra nuestro archivo. <br>
+        <h3>Screen</h3> 
+        <p>Para establecer ciertas reglas de estilo en funcion al tamaño de la pantalla en pixeles</p> <br>
+        <code>@media (min-width: 700) and (max-width: 1200px){
+        }
+        </code>
+      </p>
+      <h3>Orientacion</h3>
+      <p>Al igual que podemos establecer reglas en funcion al tamaño de la pantalla, tambien podemos hacerlo en funcion a la orientacion del dispositivo de la siguiente manera:</p> <br>
+      <code>@media (orientacion: landscape){
+      }
+      </code>
       <h2>Multimedia Flexible</h2>
       <p>
         Un elemento <b>multimedia</b> es todo aquello que no es texto, las siguientes etiquetas son ejemplos de
@@ -101,6 +125,7 @@
         podemos
         lograr con las
         siguiente regla <i>CSS</i>:
+        <img src="img/puesta-sol.jpg" alt="Puesta de sol">
       </p>
       <pre><code class="language-css">
   img, audio, video, iframe, canvas, svg, picture {
@@ -117,12 +142,31 @@
         tamaños y pesos,
         dependiendo del tamaño o la resolución de la pantalla.
       </p>
+      <h3>Srcset utilizando la resolucion de la pantalla</h3>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 1x, img/html5-3d-900.png 1.5x, img/html5-3d-1200.png 2x" alt="HTML5">
+      <br>
+      <h3>Utilizando el ancho de la pantalla</h3>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 600w, img/html5-3d-900.png 900w, img/html5-3d-1200.png 1200w" alt="HTML5">
+      <h3>Atributo size</h3>
+      <img src="img/html5-3d-600.png" srcset="img/html5-3d-600.png 600w, img/html5-3d-900.png 900w, img/html5-3d-1200.png 1200w" sizes="(max-width: 480px) 300px, (max-width: 600px) 480px, (max-width: 768px) 600px, (max-width: 1024) 768px, (min-width: 1200px) 1200px" alt="HTML5">
+      <p>
+        Lo que hacemos con el atributo source es que, con cada limite que colocamos con max-width, le damos un limite al tamaño de la imagen. Es decir, por ej, que con el max-width 480px, cada vez que el ancho de la pantalla sea menor a 480px la imagen no va a variar de 300px, una vez pase estos 480px pasara al siguiente max-width que en este caso es 600. Siempre que el ancho sea menor a 600px, la imagen no va a variar de 480px, y asi sucesivamente.
+      </p>
       <h4>Etiqueta <i>picture</i></h4>
       <p>
         El objetivo de esta etiqueta, no es sólo mostrar diferentes tamaños de la misma imagen,
         sino también mostrar imágenes diferentes. Por ejemplo, recortar una imagen de forma diferente según el tamaño de
         la
         pantalla y las diferencias en el diseño. Esto se conoce como "dirección de arte".
+        <picture>
+          <source srcset="img/kitten-large.png" media="(min-width:1024px)">
+          <source srcset="img/kitten-medium.png" media="(min-width:600px)"> 
+          <img src="img/kitten-small.png" alt="Kitten">
+        </picture>
+        <picture>
+          <source srcset="img/butterfly.webp" type="image/webp"/>
+          <img src="img/butterfly.jpg" alt="Mariposa"> 
+        </picture>
       </p>
       <h3>Videos Responsivos</h3>
       <h3>Iframes Responsivos </h3>
