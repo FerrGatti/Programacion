@@ -7,6 +7,7 @@
   <title>Curso Responsive Design y Arquitectura CSS</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
   <link rel="stylesheet" href="css/init.css">
+  <link rel="stylesheet" media="print" href="print.css"> <!-- Media query para aplicar estilos al momento de mandar a imprimir la pagina -->
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -169,7 +170,21 @@
         </picture>
       </p>
       <h3>Videos Responsivos</h3>
+      <video src="../responsive-arquitectura/assets/kenai.mp4" controls>Kenai</video>
+      <div class="responsive-media">
+        <video src="../responsive-arquitectura/assets/kenai.mp4" controls>Kenai</video>
+      </div>
+      <div class="aspect-ratio">
+        <video src="../responsive-arquitectura/assets/kenai.mp4" controls>Kenai</video>
+      </div>
       <h3>Iframes Responsivos </h3>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <br>
+      <div class="responsive-media">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y" title="YouTube video player" frameborder="0" allow="accelerometer;   autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br> <br> <br><br><br><br><br><br><br><br>
+            <iframe class="aspect-ratio" width="560" height="315" src="https://www.youtube.com/embed/udGrXWeJp1Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
     </article>
     <hr>
     <article id="media-queries" class="full-screen">

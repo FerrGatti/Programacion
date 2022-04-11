@@ -1,0 +1,9 @@
+@page {
+size: A4;
+}
+body{
+    font-size: 12pt;
+    color: white;
+    background-color: black;
+    font-family: serif;
+}
