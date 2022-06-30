@@ -62,8 +62,12 @@ main{
     justify-content: center;
     transition: 0.7s;
     color: white;
-    padding-top: 10px;
+    margin-top: -3rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.menu-link{
+    align-items: center;
+    transition: font-size 0.5s ease-in, color 0.5s ease-in, align-intems 0.5s ease-in;
 }
 .menu-link{
     text-decoration: none;
@@ -75,17 +79,32 @@ main{
 .menu-link:hover{
     color: orange;
     border: thick solid transparent;
+    font-size: 25px;
+    align-items: baseline;
 }
 
 .menu{
     padding-left: 20px;
 }
+.check{
+    width: 4rem;
+    height: 4rem;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    z-index: 999;
+    position: fixed;
+    cursor: pointer;
+    opacity: 0;
+}
 .pokebola{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: -4rem;
+    margin-left: 1rem;
     width: 60px;
     height: 60px;
-    top: 1.5vh;
-    left: 1.5vw;
-    position: fixed;
+    /* z-index: 998; */
 }
 .pokebola:hover{
     border: 3px solid transparent;
@@ -134,17 +153,27 @@ h3{
 .menu-flotante{
     height: 325px;
     width: 565px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     position: fixed;
-    top: 80px;
+    /* top: 80px;
     left: 80px;
-    z-index: 2;
     border: thick solid black;
-    display: none;
+    display: block;
     border-radius: 2%;
+    position: -100% -100%; */
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(-100%, 0);
+    transition: transform 0.5s ease-in;
 }
 .menu-flotante:target{
-    display: block;
+    transform: translate(5%, 25%);
 }
 .cerrar2{
     width: 60px;
@@ -336,6 +365,7 @@ h3{
     top: 0px;
     overflow: hidden;
     display: block;
+    transition: width 0.3s ease-in, height 0.3s ease-in;
 }
 
 .pokemons{

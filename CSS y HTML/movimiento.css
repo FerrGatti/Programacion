@@ -463,7 +463,7 @@ html{
     transition: transform 0.5s ease;
 }
 .off-canvas-burger::before{
-    transform: rotate(0deg) translate(0, -0.9rem)
+    transform: rotate(0deg) translate(0, -0.9rem)-
 }
 .off-canvas-burger::after{
     transform: rotate(0deg) translate(0, 0.3rem)
