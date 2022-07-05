@@ -28,3 +28,13 @@ function add(number1, number2){
     console.log("Esto no se va a consologear porque estar despues del return");
 }
 Numero9 = add(5,4)
+
+//Arrow function
+let duplicate = (number)=>{
+    return number *2
+}
+
+let duplicateSinReturn = number => number *2
+//Hace lo mismo que el arrow anterior
+//Solo puedo no utilizar un return si el cuerpo de la funcion tiene una sola linea
+//Solo puedo NO utilizar parentesis si la funcion tiene solo un argumento.
