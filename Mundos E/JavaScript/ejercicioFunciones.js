@@ -38,3 +38,21 @@ addProduct("Stacker cuadruple", 1500)
 filterProducts(products, "producto")
 filterProducts(products, "valor")
 filterProducts(products, ".")
+
+//Ejercicio correctamente resuelto
+const arrayProducts = [
+    {name : "coca cola", price : 400, hayStock: true},
+    {name: "galletitas", price : 500, hayStock: true},
+    {name: "caramelo", price : 300, hayStock: false},
+    {name : "agua", price: 350, hayStock: false},
+]
+function filterProducts2(array, property){
+    const result = []
+
+    for (let i = 0; i < array.length; i++){
+        result.push(array[i][property]);
+    }
+    return result
+}
+
+// function filterProducts2Map
